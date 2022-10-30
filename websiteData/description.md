@@ -1,0 +1,2 @@
+## Wobble Warriors
+Wobble Warriors is a couch co-op, top-down, dungeon-crawling game where you, and a group of friends, play as a team of dragon knights. All characters in the game utilize a system called "active ragdolls," where characters try to replicate animations through physics. This gives the game silly, wobbly feeling characters. Players must navigate through dungeons, dealing with enemies and collecting items along the way.

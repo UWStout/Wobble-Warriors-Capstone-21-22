@@ -88,16 +88,29 @@ public class RoomInfo : MonoBehaviour
 
         yield return new WaitForSeconds(time);
 
-        if (transform.GetComponent<StartingRoom>() == null && GobStopper.transform.childCount==0)
+        if(GobStopper.transform.childCount != 0)
+        {
+            yield return 0;
+        }
+
+        if (transform.GetComponent<StartingRoom>() == null
+            //&& GobStopper.transform.childCount==0
+            )
         {
             for(int i=0; i< transform.childCount; i++)
             {
                 Transform t = transform.GetChild(i);
                 if (t && t.gameObject.layer!=13)
                 {
+                    string s = "Toggling " + t.name+" in "+this.name;
+                    //Debug.Log(s);
                     t.gameObject.SetActive(toggle);
                 }
             }
+        }
+        else
+        {
+            Debug.Log("Refused to toggle");
         }
     }
     //Enables or disables hazards in this room. Returns false if there are no hazards in the room

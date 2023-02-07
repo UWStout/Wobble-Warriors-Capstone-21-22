@@ -418,4 +418,20 @@ public class Director : MonoBehaviour
     {
         CurrentExtraLife=ExtraLife;
     }
+    public Vector3 GetPlayerCenter()
+    {
+        Vector3 center = new Vector3(0, 0, 0);
+        foreach(GameObject player in PlayerList)
+        {
+            center += player.transform.position;
+        }
+        if (PlayerList.Count > 0)
+        {
+            return center / PlayerList.Count;
+        }
+        else
+        {
+            return center;
+        }
+    }
 }

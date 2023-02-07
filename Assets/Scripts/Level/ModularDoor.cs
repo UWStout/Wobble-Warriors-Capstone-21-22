@@ -280,8 +280,8 @@ public class ModularDoor : MonoBehaviour
             if (TargetRoom != MyRoom)
             {
                 t.DoAToggle(0.0f, true);
-                m.DoAToggle(1.0f, false);
                 m.setRoomHazards(false);
+                m.DoAToggle(1.0f, false);
             }
             //teleport each player to a slightly different location in front of the target door
             foreach (GameObject boi in Director.PlayerList)

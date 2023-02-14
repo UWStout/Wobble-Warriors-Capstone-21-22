@@ -298,8 +298,6 @@ public class ModularDoor : MonoBehaviour
                 {
                     boi.transform.SetPositionAndRotation(TargetDoor.position + new Vector3(boi.GetComponent<PlayerCharacter>().playerNumber, 1f, 0), boi.transform.rotation);
                 }
-                //Give camera to new room
-                Camera.NewTarget(TargetRoom.transform.position + CameraOffset);
             }
             //Disable all player indicators on door. Might be unnecessary
             for (int i = 0; i < PlayerList.Count; i++)

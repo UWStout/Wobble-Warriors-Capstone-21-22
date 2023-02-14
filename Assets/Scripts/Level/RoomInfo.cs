@@ -33,7 +33,10 @@ public class RoomInfo : MonoBehaviour
     {
         //Disabling hazards when the level loads
         setRoomHazards(false);
-        DoAToggle(1.0f, false);
+        if (transform.GetComponent<StartingRoom>() == null)
+        {
+            DoAToggle(1.0f, false);
+        }
     }
     void Awake()
     {
@@ -86,31 +89,23 @@ public class RoomInfo : MonoBehaviour
     public IEnumerator TogglePerformanceMode(float time, bool toggle)
     {
 
-        yield return new WaitForSeconds(time);
-
         if(GobStopper.transform.childCount != 0)
         {
             yield return 0;
         }
 
-        if (transform.GetComponent<StartingRoom>() == null
-            //&& GobStopper.transform.childCount==0
-            )
+        for (int i = 0; i < transform.childCount; i++)
         {
-            for(int i=0; i< transform.childCount; i++)
+            Transform t = transform.GetChild(i);
+            if (t && t.gameObject.layer != 13)
             {
-                Transform t = transform.GetChild(i);
-                if (t && t.gameObject.layer!=13)
+                string s = "Toggling " + t.name + " in " + this.name;
+                //Debug.Log(s);
+                if (t.gameObject.tag != "Floor" && t.gameObject.tag != "Wall")
                 {
-                    string s = "Toggling " + t.name+" in "+this.name;
-                    //Debug.Log(s);
                     t.gameObject.SetActive(toggle);
                 }
             }
-        }
-        else
-        {
-            Debug.Log("Refused to toggle");
         }
     }
     //Enables or disables hazards in this room. Returns false if there are no hazards in the room

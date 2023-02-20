@@ -8,6 +8,7 @@ public class Scoot : MonoBehaviour
     private Vector3 TargetPos;
     private Vector3 z = Vector3.zero;
     private float damper = .2f;
+    [SerializeField] float DesiredHeight = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class Scoot : MonoBehaviour
     }
     public void move()
     {
-        TargetPos.y = Mathf.Max(TargetPos.y-.2f, OrPos.y-10);
+        TargetPos.y = Mathf.Max(TargetPos.y-.2f, OrPos.y-(10-DesiredHeight));
     }
     public void unmove()
     {

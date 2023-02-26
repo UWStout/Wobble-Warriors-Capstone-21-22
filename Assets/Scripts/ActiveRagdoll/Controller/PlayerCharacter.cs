@@ -239,7 +239,7 @@ public class PlayerCharacter : CharacterMovement
     //handle inputs for jumping
     public void OnJump(InputAction.CallbackContext value)
     {
-
+        //Director.shake(.1f, .5f);
         if (!value.performed || !isGrounded() || knockedOut) { return; }
 
         if (rumbler)

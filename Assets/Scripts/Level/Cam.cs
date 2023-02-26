@@ -14,11 +14,16 @@ public class Cam : MonoBehaviour
     float CurrentTime;
     Director director;
     [SerializeField] float damper = .1f;
+    float shakeTime = 0f;
+    float shakeStrength = .7f;
+    [SerializeField]
+    float ShakeStrengthExternalModifier = 1f;
     // Start is called before the first frame update
     void Start()
     {
         GameObject dir = GameObject.Find("Director");
         director = dir.GetComponent<Director>();
+        director.setCamera(this);
         CurrentTime = MaxTime;
 
         here = this.transform.position;
@@ -45,6 +50,20 @@ public class Cam : MonoBehaviour
                 s.move();
             }
         }
+        //Camera Shake
+        if (shakeTime > 0)
+        {
+            //shake the camera
+            Debug.Log("I should be shaking");
+            this.transform.localPosition += Random.insideUnitSphere * shakeStrength * ShakeStrengthExternalModifier;
+
+            shakeTime-=Time.deltaTime;
+        }
+        else
+        {
+            //shakeTime = 0f;
+        }
+
     }
     Vector3 DynamicTarget()
     {
@@ -60,13 +79,23 @@ public class Cam : MonoBehaviour
                 closest = p.transform.position;
             }
         }
-        foreach(GameObject g in director.GetGobs())
+        if (director.GetGobs().Count>0)
         {
-            if ((closest - this.transform.position).magnitude > (g.transform.position - this.transform.position).magnitude)
+            foreach (GameObject g in director.GetGobs())
             {
-                closest = g.transform.position;
+                if ((closest - this.transform.position).magnitude > (g.transform.position - this.transform.position).magnitude)
+                {
+                    closest = g.transform.position;
+                }
             }
         }
         return closest;
+    }
+    public void ShakeCam(float duration, float severity)
+    {
+        //shake
+        Debug.Log("shake");
+        shakeTime = duration;
+        shakeStrength = severity;
     }
 }

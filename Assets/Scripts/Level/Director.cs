@@ -50,6 +50,7 @@ public class Director : MonoBehaviour
     public GameObject[] WeaponList;
     //List of player's weapon choices
     public GameObject[] PlayerWeapons;
+    Cam cam;
     // Start is called before the first frame update
     void Start()
     {
@@ -442,5 +443,13 @@ public class Director : MonoBehaviour
             gobs.Add(CurrentGobStopper.transform.GetChild(i).gameObject);
         }
         return gobs;
+    }
+    public void setCamera(Cam c)
+    {
+        cam = c;
+    }
+    public void shake(float t, float s)
+    {
+        cam.ShakeCam(t, s);
     }
 }

@@ -41,13 +41,16 @@ public class Cam : MonoBehaviour
         //Check if there's a wall in the way of any players or gobs
         Vector3 closest = GetClosestPosition();
         Ray r = new Ray(transform.position, closest - this.transform.position);
-        RaycastHit hit;
-        if(Physics.Raycast(r, out hit, (closest - this.transform.position).magnitude))
+        RaycastHit[] hits= Physics.RaycastAll(r,(closest - this.transform.position).magnitude);
+        if(hits.Length>0)
         {
-            if (hit.transform.GetComponent<Scoot>())
+            foreach (RaycastHit hit in hits)
             {
-                Scoot s = hit.transform.GetComponent<Scoot>();
-                s.move();
+                if (hit.transform.GetComponent<Scoot>())
+                {
+                    Scoot s = hit.transform.GetComponent<Scoot>();
+                    s.move();
+                }
             }
         }
         //Camera Shake

@@ -14,7 +14,7 @@ public class Director : MonoBehaviour
     GameObject CurrentRoom;
     //Room Info for room that players are in, and the room itself
     RoomInfo CurrentRoomInfo;
-    GameObject CurrentGobStopper;
+    GameObject CurrentGobStopper=null;
     //Boolean describing whether doors can activate
     [SerializeField] public bool CanTeleport=true;
     //Current number of living gobs in current room

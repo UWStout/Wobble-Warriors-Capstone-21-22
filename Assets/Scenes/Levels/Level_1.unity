@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.29975304, g: 0.6659577, b: 2.1583257, a: 1}
+  m_IndirectSpecularColor: {r: 0.30165035, g: 0.670825, b: 2.1783543, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -949,6 +949,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5981359688984457811, guid: 95e0e3981b90bf24bb89ea2d0ae85a24, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6033648656487005204, guid: 95e0e3981b90bf24bb89ea2d0ae85a24, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
@@ -1076,6 +1080,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1800337045565134029, guid: 95e0e3981b90bf24bb89ea2d0ae85a24, type: 3}
   m_PrefabInstance: {fileID: 264490371}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &264490373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5189491254212991164, guid: 95e0e3981b90bf24bb89ea2d0ae85a24, type: 3}
+  m_PrefabInstance: {fileID: 264490371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &264490374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264490373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredHeight: 3
 --- !u!1 &311905599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,6 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DesiredHeight: 3
 --- !u!1 &420407169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,6 +3507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraOffset: {x: 0, y: 10.9, z: -11.12}
   damper: 0.1
+  ShakeStrengthExternalModifier: 1
 --- !u!1 &1153329595
 GameObject:
   m_ObjectHideFlags: 1
@@ -4728,6 +4752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DesiredHeight: 3
 --- !u!1 &1541214922
 GameObject:
   m_ObjectHideFlags: 0

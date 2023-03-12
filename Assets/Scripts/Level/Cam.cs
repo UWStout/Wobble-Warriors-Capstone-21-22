@@ -9,11 +9,13 @@ public class Cam : MonoBehaviour
     Vector3 here;
     Vector3 there;
     Vector3 z = Vector3.zero;
+    float camz = 0f;
     Vector3 t;
     float MaxTime = .5f;
     float CurrentTime;
     Director director;
     [SerializeField] float damper = .25f;
+    [SerializeField] float camdamper = .25f;
     float shakeTime = 0f;
     float shakeStrength = .7f;
     [SerializeField]
@@ -25,10 +27,12 @@ public class Cam : MonoBehaviour
     [SerializeField]
     float MaximumFOV = 120f;
     [SerializeField]
-    float FovVelocity = 1.01f;
+    float FovVelocity = 1.05f;
+    float currentFieldOfViewVelocity;
     [SerializeField]
-    float ScreenBoundary = .3f;
+    float ScreenCenterRadius = .3f;
     Camera Camera;
+    float desiredFOV;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +50,7 @@ public class Cam : MonoBehaviour
     {
         widenFOV = false;
         accelFOV = false;
+        currentFieldOfViewVelocity = FovVelocity;
         ///Move smoothly to player center
         //Find and store center point of all players
         t = DynamicTarget();
@@ -87,32 +92,10 @@ public class Cam : MonoBehaviour
         {
             shakeTime = 0f;
         }
-        float desiredFOV = Camera.fieldOfView;
+        
         ///Adjust Camera FOV to fit all players comfortably
-        if (widenFOV)
-        {
-            if (accelFOV)
-            {
-                desiredFOV *= FovVelocity;
-            }
-            else
-            {
-                desiredFOV *= (FovVelocity * FovVelocity);
-            }
-        }
-        else
-        {
-            if (accelFOV)
-            {
-                desiredFOV /= FovVelocity;
-            }
-            else
-            {
-                desiredFOV /= (FovVelocity * FovVelocity);
-            }
-        }
         desiredFOV = Mathf.Clamp(desiredFOV, MinimumFOV, MaximumFOV);
-        Camera.fieldOfView = Mathf.Lerp(Camera.fieldOfView, desiredFOV, .3f) ;
+        Camera.fieldOfView = Mathf.SmoothDamp(Camera.fieldOfView, desiredFOV, ref camz, camdamper);
     }
     //Returns the center of the players
     Vector3 DynamicTarget()
@@ -125,29 +108,25 @@ public class Cam : MonoBehaviour
         //Use the player center as a failsafe vector to avoid funky rays
         Vector3 closest = director.GetPlayerCenter();
         //Check the distance of every player from the camera
+        desiredFOV = Camera.fieldOfView;
+        float accel = -Mathf.Infinity;
         foreach (GameObject p in director.PlayerList)
         {
             Vector3 screenPos = Camera.WorldToScreenPoint(p.transform.position);
-            if (screenPos.x < 0 || screenPos.y < 0 || screenPos.x > Camera.pixelWidth || screenPos.y > Camera.pixelHeight)
-            {
-                //Debug.Log("oh no");
-                widenFOV = true;
-                accelFOV = true;
-            }
-            if  (   screenPos.x < Camera.pixelWidth*ScreenBoundary
-                ||  screenPos.x > Camera.pixelWidth-(Camera.pixelWidth * ScreenBoundary)
-                ||  screenPos.y < Camera.pixelHeight*ScreenBoundary
-                ||  screenPos.y > Camera.pixelHeight-(Camera.pixelHeight*ScreenBoundary))
-            {
-                //Debug.Log("Player is at (" + screenPos.x + ", " + screenPos.y + ")");
-                widenFOV = true;
-            }
-            if ((closest - this.transform.position).magnitude > (p.transform.position - this.transform.position).magnitude)
-            {
-                //overwrite closest if there is a closer player
-                closest = p.transform.position;
-            }
+            //get the distance of the player from the center of the screen
+            float distance;
+            //x axis
+            distance = Mathf.Abs( (screenPos.x / Camera.pixelWidth) - .5f );
+            //y axis
+            distance = Mathf.Max(Mathf.Abs( (screenPos.y / Camera.pixelHeight) - .5f), distance);
+            Debug.Log("Player " + p.name + " is this far away from the center: " + distance);
+            //Account for the margin
+            distance -= ScreenCenterRadius;
+            //overwrite with max value
+            accel = Mathf.Max(accel, distance);
+            
         }
+        desiredFOV = (Camera.fieldOfView + accel*10*FovVelocity);
         //Check the distance of every enemy from the camera
         /*
         if (director.GetGobs()!=null&&director.GetGobs().Count>0)

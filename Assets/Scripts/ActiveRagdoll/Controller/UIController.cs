@@ -17,7 +17,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         playerNumber = GetComponent<PlayerInput>().playerIndex + 1;
-        lives = GameObject.Find("Canvas").GetComponent<ReadyUpLives>();
+        lives = FindObjectOfType<ReadyUpLives>();
     }
 
     void Update()

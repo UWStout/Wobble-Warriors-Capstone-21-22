@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class DisableHazards : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-
-    
 
     private Transform CurrentRoom;
 
@@ -18,15 +14,6 @@ public class DisableHazards : MonoBehaviour
     [SerializeField] private List<AudioSource> HazardAudioSFX;
 
     private string[] HazardTags;
-
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    
 
     public void DisableHazard()
     {

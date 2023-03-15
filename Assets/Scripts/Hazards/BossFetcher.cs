@@ -15,29 +15,17 @@ public class BossFetcher : MonoBehaviour
     [SerializeField] private RubbleSpawn rubblespawner;
 
     private bool StunDuration = false;
-    private void start()
+    private void Start()
     {
-        if(BossCharacter == null)
-        {
-            Debug.Log("Boss Character shouldn't be null");
-        }
-
-        if (IsStunned)
-        {
-            Debug.Log("IsStunned should start out false");
-        }
+        BossCharacter = FindObjectOfType<TestBossAI>().gameObject;
     }
-
-
 
     public void RunRubbleSpawner()
     {
         GetComponentInChildren<AudioSource>().enabled = true;
         GetComponentInChildren<AudioSource>().Play();
         rubblespawner.spawnRubble();
-    }//on boss collision rubble spawner activates
-
-
+    }
 
     public bool getStunned()
     {

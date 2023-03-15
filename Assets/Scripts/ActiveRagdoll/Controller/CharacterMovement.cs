@@ -67,7 +67,7 @@ public class CharacterMovement : MonoBehaviour
         {
             animator.SetFloat("speed", 0);
         }
-        Director = GameObject.Find("Director").GetComponent<Director>();
+        Director = FindObjectOfType<Director>();
 
         UpdateTargets();
     }

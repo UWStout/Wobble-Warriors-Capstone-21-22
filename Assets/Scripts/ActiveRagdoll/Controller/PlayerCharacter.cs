@@ -59,19 +59,30 @@ public class PlayerCharacter : CharacterMovement
         rumbler = GetComponent<ControllerRumble>();
         playerNumber = GetComponent<PlayerInput>().playerIndex;
         string playerLink = "player" + (playerNumber + 1);
-        playerRef = GameObject.Find(playerLink).GetComponent<PlayerJoin>();
+        playerRef = FindObjectOfType<PlayerJoin>();
         findHealthBar();
         reloadHealth();
     }
 
     private void findHealthBar()
     {
-        healthBar = FindObjectOfType<HealthbarManager>().getHealthbar(playerNumber);
+        HealthbarManager manager = FindObjectOfType<HealthbarManager>();
+        if(manager == null)
+        {
+            Debug.LogWarning("[PlayerCharacter] Health bar not found!");
+            return;
+        }
+        healthBar = manager.getHealthbar(playerNumber);
         healthBar.character = this;
     }
 
     public void reloadHealth()
     {
+        if (!Director)
+        {
+            Debug.LogWarning("[PlayerCharacter] Director not found!");
+            return;
+        }
         if (!isEnemy && doPlayerHealthScaling) //player health scaling
         {
             MaxHealth = healthValuesPerPlayer[Director.PlayerList.Count - 1];

@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class HazardKnockback : MonoBehaviour
 {
-
-
-
-    [SerializeField] private float Knockback = 0.25f;//scalar that modifies the base knockback force
+ /*   [SerializeField] private float Knockback = 0.25f;//scalar that modifies the base knockback force
 
     [SerializeField] private bool IgnoreSpeed = true;//this variable is for the modification of knockback though speed. If false, RotationSpped needs to be grabbed from another script (this script is stored in rotation speed)
 
@@ -19,18 +16,6 @@ public class HazardKnockback : MonoBehaviour
     private float KnockBackScale = 10000;//knockback that is applied to the player or enemy upon colliding with a hazard
 
 
-
-    //public RoomEnemies RoomEnemies = null;
-
-    private bool EnemiesInRoom = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-
     private void OnEnable()
     {
         if (!IgnoreSpeed)
@@ -39,58 +24,6 @@ public class HazardKnockback : MonoBehaviour
             {
                 Debug.Log("IgnoreSpeed is false yet there is no script attached to rotation speed. Either Set Ignore Speed to (true) or link a script with (float rotationSpeed) to rotation speed");
             }
-
-        }
-    }
-    public float getKBscale()
-    {
-        return KnockBackScale;
-    }
-
-    public float getKB()
-    {
-        return Knockback;
-    }
-
-    public bool getISpeed()
-    {
-        return IgnoreSpeed;
-    }
-
-
-
-    public Capstan getRotationSpeed()
-    {
-        return rotationSpeed;
-    }
-
-    public GameObject getHitEffect()
-    {
-        return HitParticleFX;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void FixxedUpdate()
-    {
-        /*if (RoomEnemies)
-        {
-            if(RoomEnemies.enemiesInRoom == 0)
-            {
-                EnemiesInRoom == false;
-            }
-        }*/
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<ConfigurableJoint>())
-        {
-
         }
     }
 
@@ -137,5 +70,5 @@ public class HazardKnockback : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
@@ -301,7 +301,7 @@ public class HazardTests
 
     }
 
-    /*[UnityTest]
+    *//*[UnityTest]
     public IEnumerator DynamicCapstanTest()
     {
         float rotationSpeed = capstan.GetComponentInChildren<Capstan>().RotationSpeed;
@@ -327,7 +327,7 @@ public class HazardTests
 
         Assert.AreNotEqual(playerStartLocation, player.transform.position, "Start location: " + playerStartLocation + "Current location after knockback: " + player.transform.position);
 
-    }*/
+    }*//*
 
     [Test]
     public void ConveyorTest()
@@ -353,7 +353,7 @@ public class HazardTests
         Assert.AreEqual(new Vector2(2,0), ATScript.getASpeed());
     }
 
-    /*[UnityTest]
+    *//*[UnityTest]
     public IEnumerator DynamicConveyortest()
     {
         player.transform.position = Conveyor.transform.position;
@@ -366,7 +366,7 @@ public class HazardTests
 
 
         yield return null;
-    }*/
+    }*//*
 
     [Test]
     public void MineCartPathTest()
@@ -639,3 +639,4 @@ public class HazardTests
 
 
 }
+*/

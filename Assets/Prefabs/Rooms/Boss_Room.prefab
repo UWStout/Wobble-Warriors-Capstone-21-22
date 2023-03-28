@@ -1182,6 +1182,7 @@ GameObject:
   - component: {fileID: 4048849566749558376}
   - component: {fileID: 4048849566749558379}
   - component: {fileID: 4048849566749558378}
+  - component: {fileID: 5276122899930156032}
   m_Layer: 0
   m_Name: Fwall
   m_TagString: Wall
@@ -1265,6 +1266,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 5.4703693, z: 1}
   m_Center: {x: 0, y: 2.2351873, z: 0}
+--- !u!114 &5276122899930156032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4048849566749558372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredHeight: 3
 --- !u!1 &4048849567203109608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,6 +2015,7 @@ GameObject:
   - component: {fileID: 1247607226410768203}
   - component: {fileID: 8344744364861426807}
   - component: {fileID: 3649492552510073346}
+  - component: {fileID: 519203636071299390}
   m_Layer: 0
   m_Name: Bwall
   m_TagString: Wall
@@ -2037,7 +2052,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7550483748817266328}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2084,6 +2099,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 5.4744325, z: 1}
   m_Center: {x: 0, y: 2.2372158, z: 0}
+--- !u!114 &519203636071299390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7550483748817266328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredHeight: 3
 --- !u!1 &8632676020383365567
 GameObject:
   m_ObjectHideFlags: 0

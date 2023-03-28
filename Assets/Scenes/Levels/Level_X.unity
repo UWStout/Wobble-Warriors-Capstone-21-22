@@ -146,6 +146,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 675768811152309448, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 675768811152309448, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.52
+      objectReference: {fileID: 0}
     - target: {fileID: 1503781358132389127, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -318,8 +326,41 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8820320717368727701, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+      propertyPath: row
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820320717368727701, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+      propertyPath: column
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820320717368727701, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+      propertyPath: leash.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820320717368727701, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+      propertyPath: leash.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820320717368727701, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+      propertyPath: leash.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820320717368727701, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+      propertyPath: GobStopper
+      value: 
+      objectReference: {fileID: 49268173}
+    - target: {fileID: 8820320717368727701, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+      propertyPath: EnemyCharacter
+      value: 
+      objectReference: {fileID: 5637542500453407579, guid: f65061c55ff989c4eae6b43784bf6863, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+--- !u!1 &49268173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2649961008935243172, guid: 51eb0ec6fb92fe64a82655a9f12b23f5, type: 3}
+  m_PrefabInstance: {fileID: 49268172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &55662105
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +683,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5452360695605942997, guid: 67eab854cfc788343b39b088650c8caf, type: 3}
+      propertyPath: row
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452360695605942997, guid: 67eab854cfc788343b39b088650c8caf, type: 3}
+      propertyPath: column
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452360695605942997, guid: 67eab854cfc788343b39b088650c8caf, type: 3}
+      propertyPath: leash.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452360695605942997, guid: 67eab854cfc788343b39b088650c8caf, type: 3}
+      propertyPath: leash.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452360695605942997, guid: 67eab854cfc788343b39b088650c8caf, type: 3}
+      propertyPath: leash.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452360695605942997, guid: 67eab854cfc788343b39b088650c8caf, type: 3}
+      propertyPath: GobStopper
+      value: 
+      objectReference: {fileID: 99640303}
+    - target: {fileID: 5452360695605942997, guid: 67eab854cfc788343b39b088650c8caf, type: 3}
+      propertyPath: EnemyCharacter
+      value: 
+      objectReference: {fileID: 5637542500453407579, guid: f65061c55ff989c4eae6b43784bf6863, type: 3}
     - target: {fileID: 5714004112830943247, guid: 67eab854cfc788343b39b088650c8caf, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -720,6 +789,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67eab854cfc788343b39b088650c8caf, type: 3}
+--- !u!1 &99640303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4800366247358815447, guid: 67eab854cfc788343b39b088650c8caf, type: 3}
+  m_PrefabInstance: {fileID: 99640302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &195769819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1027,6 +1101,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7509845551020308404, guid: 684879d0427ac654996c06515350af79, type: 3}
+      propertyPath: row
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509845551020308404, guid: 684879d0427ac654996c06515350af79, type: 3}
+      propertyPath: column
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509845551020308404, guid: 684879d0427ac654996c06515350af79, type: 3}
+      propertyPath: leash.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509845551020308404, guid: 684879d0427ac654996c06515350af79, type: 3}
+      propertyPath: leash.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509845551020308404, guid: 684879d0427ac654996c06515350af79, type: 3}
+      propertyPath: leash.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509845551020308404, guid: 684879d0427ac654996c06515350af79, type: 3}
+      propertyPath: GobStopper
+      value: 
+      objectReference: {fileID: 317505896}
+    - target: {fileID: 7509845551020308404, guid: 684879d0427ac654996c06515350af79, type: 3}
+      propertyPath: EnemyCharacter
+      value: 
+      objectReference: {fileID: 5637542500453407579, guid: f65061c55ff989c4eae6b43784bf6863, type: 3}
     - target: {fileID: 7808967988221476571, guid: 684879d0427ac654996c06515350af79, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1061,6 +1163,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684879d0427ac654996c06515350af79, type: 3}
+--- !u!1 &317505896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3511843715553034618, guid: 684879d0427ac654996c06515350af79, type: 3}
+  m_PrefabInstance: {fileID: 317505895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &322633616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1368,14 @@ PrefabInstance:
     - target: {fileID: 3699197660884378607, guid: a933933f39c7e39448f63140ce659947, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206078270990619794, guid: a933933f39c7e39448f63140ce659947, type: 3}
+      propertyPath: MaxGobs
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206078270990619794, guid: a933933f39c7e39448f63140ce659947, type: 3}
+      propertyPath: cleared
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4428586999357880874, guid: a933933f39c7e39448f63140ce659947, type: 3}
       propertyPath: m_IsActive
@@ -1490,6 +1605,22 @@ PrefabInstance:
     - target: {fileID: 3831287912360806976, guid: 69e19d61d2061e64aa13cc38030d85d6, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253326767105621711, guid: 69e19d61d2061e64aa13cc38030d85d6, type: 3}
+      propertyPath: column
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253326767105621711, guid: 69e19d61d2061e64aa13cc38030d85d6, type: 3}
+      propertyPath: leash.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530759072446519636, guid: 69e19d61d2061e64aa13cc38030d85d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530759072446519636, guid: 69e19d61d2061e64aa13cc38030d85d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.29
       objectReference: {fileID: 0}
     - target: {fileID: 4969888614628927251, guid: 69e19d61d2061e64aa13cc38030d85d6, type: 3}
       propertyPath: m_Enabled
@@ -2224,6 +2355,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2922060212160315534, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922060212160315534, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.61
+      objectReference: {fileID: 0}
     - target: {fileID: 3833530085303834945, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2276,6 +2415,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4018006619517465544, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+      propertyPath: row
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018006619517465544, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+      propertyPath: column
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018006619517465544, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+      propertyPath: leash.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018006619517465544, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+      propertyPath: leash.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018006619517465544, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+      propertyPath: leash.z
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018006619517465544, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+      propertyPath: GobStopper
+      value: 
+      objectReference: {fileID: 566726387}
+    - target: {fileID: 4018006619517465544, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+      propertyPath: EnemyCharacter
+      value: 
+      objectReference: {fileID: 5637542500453407579, guid: f65061c55ff989c4eae6b43784bf6863, type: 3}
     - target: {fileID: 4617439742877035605, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2334,6 +2501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+--- !u!1 &566726387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 372500382794101218, guid: 5b8b3c8a91688e74c957f1c66ae18f7c, type: 3}
+  m_PrefabInstance: {fileID: 566726386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &675909342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2859,6 +3031,10 @@ PrefabInstance:
     - target: {fileID: 8535275462594970547, guid: 7cfdc77daf42ff241ad7fa4f838cbf8d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558844131244087160, guid: 7cfdc77daf42ff241ad7fa4f838cbf8d, type: 3}
+      propertyPath: column
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8827471844524803614, guid: 7cfdc77daf42ff241ad7fa4f838cbf8d, type: 3}
       propertyPath: m_Enabled
@@ -3627,6 +3803,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room_0_-1
       objectReference: {fileID: 0}
+    - target: {fileID: 1956147512323761026, guid: beafe95d7d64fc448af3796a435e9319, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956147512323761026, guid: beafe95d7d64fc448af3796a435e9319, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.48
+      objectReference: {fileID: 0}
     - target: {fileID: 2343805007670185986, guid: beafe95d7d64fc448af3796a435e9319, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4331,6 +4515,14 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.17027621
       objectReference: {fileID: 0}
+    - target: {fileID: 6355238156591205291, guid: beafe95d7d64fc448af3796a435e9319, type: 3}
+      propertyPath: column
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355238156591205291, guid: beafe95d7d64fc448af3796a435e9319, type: 3}
+      propertyPath: leash.z
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6416016268042027028, guid: beafe95d7d64fc448af3796a435e9319, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -31.144613
@@ -4975,6 +5167,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6555660853443723416, guid: e692a15d9d03b2a45bc516a4b319c417, type: 3}
+      propertyPath: row
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555660853443723416, guid: e692a15d9d03b2a45bc516a4b319c417, type: 3}
+      propertyPath: leash.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555660853443723416, guid: e692a15d9d03b2a45bc516a4b319c417, type: 3}
+      propertyPath: leash.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555660853443723416, guid: e692a15d9d03b2a45bc516a4b319c417, type: 3}
+      propertyPath: leash.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555660853443723416, guid: e692a15d9d03b2a45bc516a4b319c417, type: 3}
+      propertyPath: GobStopper
+      value: 
+      objectReference: {fileID: 1650362447}
+    - target: {fileID: 6555660853443723416, guid: e692a15d9d03b2a45bc516a4b319c417, type: 3}
+      propertyPath: EnemyCharacter
+      value: 
+      objectReference: {fileID: 5637542500453407579, guid: f65061c55ff989c4eae6b43784bf6863, type: 3}
     - target: {fileID: 6806767193906719284, guid: e692a15d9d03b2a45bc516a4b319c417, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -5037,6 +5253,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e692a15d9d03b2a45bc516a4b319c417, type: 3}
+--- !u!1 &1650362447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7957423898763117207, guid: e692a15d9d03b2a45bc516a4b319c417, type: 3}
+  m_PrefabInstance: {fileID: 1650362446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1744048418
 GameObject:
   m_ObjectHideFlags: 0
@@ -5180,6 +5401,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2158088051661702739, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158088051661702739, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.76
+      objectReference: {fileID: 0}
     - target: {fileID: 2590865612098989270, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5192,6 +5421,34 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3884852681820554578, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+      propertyPath: row
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884852681820554578, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+      propertyPath: column
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884852681820554578, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+      propertyPath: leash.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884852681820554578, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+      propertyPath: leash.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884852681820554578, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+      propertyPath: leash.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884852681820554578, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+      propertyPath: GobStopper
+      value: 
+      objectReference: {fileID: 1773154232}
+    - target: {fileID: 3884852681820554578, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+      propertyPath: EnemyCharacter
+      value: 
+      objectReference: {fileID: 5637542500453407579, guid: f65061c55ff989c4eae6b43784bf6863, type: 3}
     - target: {fileID: 3985798930051332709, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -5342,6 +5599,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+--- !u!1 &1773154232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3482774541660485439, guid: 59e74b58a70240c40bb05f2b8d6caf96, type: 3}
+  m_PrefabInstance: {fileID: 1773154231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1773257927
 PrefabInstance:
   m_ObjectHideFlags: 0

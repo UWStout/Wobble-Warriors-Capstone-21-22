@@ -119,7 +119,7 @@ public class Cam : MonoBehaviour
             distance = Mathf.Abs( (screenPos.x / Camera.pixelWidth) - .5f );
             //y axis
             distance = Mathf.Max(Mathf.Abs( (screenPos.y / Camera.pixelHeight) - .5f), distance);
-            Debug.Log("Player " + p.name + " is this far away from the center: " + distance);
+            //Debug.Log("Player " + p.name + " is this far away from the center: " + distance);
             //Account for the margin
             distance -= ScreenCenterRadius;
             //overwrite with max value

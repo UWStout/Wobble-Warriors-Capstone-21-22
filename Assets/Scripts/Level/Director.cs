@@ -438,6 +438,10 @@ public class Director : MonoBehaviour
     public List<GameObject> GetGobs()
     {
         List<GameObject> gobs = new List<GameObject>();
+        if (CurrentGobStopper == null)
+        {
+            return null;
+        }
         for(int i=0; i<CurrentGobStopper.transform.childCount; i++)
         {
             gobs.Add(CurrentGobStopper.transform.GetChild(i).gameObject);

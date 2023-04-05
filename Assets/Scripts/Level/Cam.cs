@@ -119,42 +119,30 @@ public class Cam : MonoBehaviour
             distance = Mathf.Abs( (screenPos.x / Camera.pixelWidth) - .5f );
             //y axis
             distance = Mathf.Max(Mathf.Abs( (screenPos.y / Camera.pixelHeight) - .5f), distance);
-            Debug.Log("Player " + p.name + " is this far away from the center: " + distance);
+            //Debug.Log("Player " + p.name + " is this far away from the center: " + distance);
             //Account for the margin
             distance -= ScreenCenterRadius;
             //overwrite with max value
             accel = Mathf.Max(accel, distance);
             
         }
-        desiredFOV = (Camera.fieldOfView + accel*10*FovVelocity);
-        //Check the distance of every enemy from the camera
-        /*
-        if (director.GetGobs()!=null&&director.GetGobs().Count>0)
+        foreach (GameObject p in director.GetGobs())
         {
-            foreach (GameObject g in director.GetGobs())
-            {
-                Vector3 screenPos = Camera.WorldToScreenPoint(g.transform.position);
-                if (screenPos.x < 0 || screenPos.y < 0 || screenPos.x > Camera.pixelWidth || screenPos.y > Camera.pixelHeight)
-                {
-                    widenFOV = true;
-                    accelFOV = true;
-                }
-                if (screenPos.x < Camera.pixelWidth * ScreenBoundary
-                    || screenPos.x > Camera.pixelWidth - (Camera.pixelWidth * ScreenBoundary)
-                    || screenPos.y < Camera.pixelHeight * ScreenBoundary
-                    || screenPos.y > Camera.pixelHeight - (Camera.pixelHeight * ScreenBoundary))
-                {
-                    widenFOV = true;
-                }
-                if ((closest - this.transform.position).magnitude > (g.transform.position - this.transform.position).magnitude)
-                {
-                    //overwrite closest if there is a closer enemy
-                    closest = g.transform.position;
-                }
-            }
+            Vector3 screenPos = Camera.WorldToScreenPoint(p.transform.position);
+            //get the distance of the player from the center of the screen
+            float distance;
+            //x axis
+            distance = Mathf.Abs((screenPos.x / Camera.pixelWidth) - .5f);
+            //y axis
+            distance = Mathf.Max(Mathf.Abs((screenPos.y / Camera.pixelHeight) - .5f), distance);
+            //Debug.Log("Player " + p.name + " is this far away from the center: " + distance);
+            //Account for the margin
+            distance -= ScreenCenterRadius;
+            //overwrite with max value
+            accel = Mathf.Max(accel, distance);
+
         }
-        */
-        //V
+        desiredFOV = (Camera.fieldOfView + accel * 10 * FovVelocity);
         return closest;
     }
     //Public function to set shake duration and severity

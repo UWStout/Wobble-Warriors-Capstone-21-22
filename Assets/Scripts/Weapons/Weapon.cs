@@ -94,7 +94,7 @@ public class Weapon : MonoBehaviour
                     hitCollider.GetComponent<Rigidbody>().AddForce(hitVector.normalized * knockback * KBMod);
                     if (hitCollider.GetComponent<AICharacter>())
                     {
-                        hitCollider.GetComponent<AICharacter>().chosenTarget = holder.gameObject;
+                        hitCollider.GetComponent<AICharacter>().currentTarget = player;
                         Debug.Log(holder);
 
                     }
@@ -136,7 +136,7 @@ public class Weapon : MonoBehaviour
                     }
                     if (characterRoot.GetComponent<AICharacter>() && holder.gameObject.GetComponent<PlayerCharacter>())
                     {
-                        characterRoot.GetComponent<AICharacter>().chosenTarget = holder.gameObject;
+                        characterRoot.GetComponent<AICharacter>().currentTarget = holder.gameObject.GetComponent<PlayerCharacter>();
                         Debug.Log(holder);
 
                     }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Hazard : MonoBehaviour
 {
-    [SerializeField] float knockback = 0.25f;
+    [SerializeField] float knockback = 25f;
+    public float kbMod = 1.0f;
     [SerializeField] GameObject HitParticleFX = null;
 
     private void OnCollisionEnter(Collision collision)
@@ -21,7 +22,7 @@ public class Hazard : MonoBehaviour
 
                 //direction of collision
                 Vector3 direction = -collision.GetContact(0).normal;
-                direction.y = 0;
+                //direction.y = 0;
 
                 //set velocity of character
                 characterCenter.GetComponent<Rigidbody>().AddForce(direction.normalized * knockback, ForceMode.VelocityChange);

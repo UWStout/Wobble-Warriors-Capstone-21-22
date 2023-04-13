@@ -3,24 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //AUTHOR: Brian Bauch
+//rewritten by jaden schneider lol
 public class AICharacter : CharacterMovement
 {
-    private GameObject[] targetsArray; //Array containing all of the present players in the game
-
-    [SerializeField] string targetString = "Target";
-
-    public GameObject chosenTarget; //Game Object variable storing the currently targeted player
-    private bool targetChosen = false; //bool that tells whether or not this entity has a current target
+    public PlayerCharacter currentTarget; //Game Object variable storing the currently targeted player
 
     [Tooltip("The rate at which the enemy attacks (lower = faster)")]
-    [SerializeField] float attackRate;
-    [SerializeField] float attackDistance = 3;
+    public float attackRate;
+    public float attackDistance = 3;
 
-    private bool ableToAttk = true; //bool that states whether the entity is able to attack
+    public bool ableToAttk = true; //bool that states whether the entity is able to attack
 
     [SerializeField] AudioClip[] growlSounds;
     [SerializeField] float soundChance = 40;
-
 
     [SerializeField] float LowPitch = .75f;
     [SerializeField] float HighPitch = 1.25f;
@@ -37,7 +32,6 @@ public class AICharacter : CharacterMovement
     {
         //establish the targets array by finding all targets in the room with the set tag
         ableToAttk = true;
-        targetsArray = GameObject.FindGameObjectsWithTag(targetString);
         reloadHealth();
     }
 
@@ -48,58 +42,60 @@ public class AICharacter : CharacterMovement
         if (!knockedOut)
         {
             //if there is a target not currently chosen, then choose a target. or else face and move towards the chosen target
-            if (!targetChosen)
+            if (currentTarget == null)
             {
-                ChooseTarget();
+                currentTarget = ChooseTarget();
             }
             else
             {
-                MoveTowardTarget();
+                AIBehaviour();
             }
         }
     }
 
     //for choosing a target
-    void ChooseTarget()
+    PlayerCharacter ChooseTarget()
     {
-        //generate a random number from 0 to 3
-        //if the alive bool of the chosen index is true, then choose that index as your target. or else set target chosen to false
-        int randnum = Random.Range(0, targetsArray.Length);
-        if (!targetsArray[randnum].GetComponent<CharacterMovement>().knockedOut)
-        {
-            chosenTarget = targetsArray[randnum];
-            targetChosen = true;
-        }
-        else
-        {
-            targetChosen = false;
-        }
-    }
+        //find all player characters in the scene
+        PlayerCharacter[] players = FindObjectsOfType<PlayerCharacter>();
+        List<PlayerCharacter> validTargets = new List<PlayerCharacter>();
 
-    //for moving towards a target
-    void MoveTowardTarget()
-    {
-        //determine the x and z axis distance from the chosen target
-        float xDist = chosenTarget.transform.position.x - transform.position.x;
-        float zDist = chosenTarget.transform.position.z - transform.position.z;
-        //if either the x or z distance is greater than attackDistance, move towards the target. or else attack.
-        if (Mathf.Abs(xDist) > attackDistance || Mathf.Abs(zDist) > attackDistance)
+        //filter valid targets for an active player
+        for(int i = 0; i < players.Length; i++)
         {
-            MoveTowards(chosenTarget.transform.position);
-            LookAt(chosenTarget.transform.position);
-        }
-        else
-        {
-            MoveTowards(chosenTarget.transform.position);
-            LookAt(chosenTarget.transform.position);
-            if (ableToAttk)
+            if (!players[i].knockedOut)
             {
-                StartCoroutine(AttackTarget());
+                validTargets.Add(players[i]);
             }
         }
+
+        //return no target if none are found
+        if(validTargets.Count == 0) 
+        {
+            return null;
+        }
+
+        //select random target if one or more is found
+        return validTargets[Random.Range(0, validTargets.Count)];
     }
 
-    void PlayRandomSound()
+    //AI behaviour. can be overwritten for different AI
+    public virtual void AIBehaviour()
+    {
+        //find distance between transform and target
+        float distance = Vector3.Distance(transform.position, currentTarget.transform.position);
+
+        MoveTowards(currentTarget.transform.position);
+        LookAt(currentTarget.transform.position);
+
+        //move toward 
+        if (distance <= attackDistance && ableToAttk)
+        {
+            StartCoroutine(AttackTarget());
+        }
+    }
+
+    public void PlayRandomSound()
     {
         //if the randomly generated number is less than the sound chance variable
         if (Random.Range(0, 100) < soundChance)
@@ -121,11 +117,11 @@ public class AICharacter : CharacterMovement
             PlayRandomSound();
         }
         Debug.Log("Attacking");
-        Attack(chosenTarget.transform);
+        Attack(currentTarget.transform);
         //if the chosen target is no longer alive after attacking, set target chosen to false
-        if (chosenTarget.GetComponent<CharacterMovement>().knockedOut)
+        if (currentTarget.knockedOut)
         {
-            targetChosen = false;
+            currentTarget = null;
         }
         //go into an attack cooldown state, waiting the attack rate variable to be able to attack again
         ableToAttk = false;

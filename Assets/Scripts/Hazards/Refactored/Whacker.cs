@@ -46,7 +46,7 @@ public class Whacker : Hazard
 
     void FixedUpdate()
     {
-        currentTime += Time.fixedDeltaTime;
+        currentTime += Time.deltaTime;
         if (currentTime > duration||triggered) {
             triggered = false;
             currentTime = 0;

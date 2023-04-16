@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Minecart : Hazard
+public class Minecart : MonoBehaviour
 {
     [SerializeField] GameObject StartTunnel;
     Vector3 StartPoint;

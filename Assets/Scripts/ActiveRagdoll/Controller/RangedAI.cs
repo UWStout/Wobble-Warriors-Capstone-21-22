@@ -14,9 +14,22 @@ public class RangedAI : AICharacter
     //AI behaviour. can be overwritten for different AI
     public override void AIBehaviour()
     {
+        float distance = Vector3.Distance(transform.position, currentTarget.transform.position);
+
         //move away from target
-        SetMoveDirection((transform.position - currentTarget.transform.position).normalized);
+
+
         LookAt(currentTarget.transform.position);
+
+        if (distance < maxDistance)
+        {
+            SetMoveDirection((transform.position - currentTarget.transform.position).normalized);
+        }
+        else
+        {
+            SetMoveDirection(Vector3.zero);
+        }
+        
 
         //ranged goblins always attack lol
         if (ableToAttk)

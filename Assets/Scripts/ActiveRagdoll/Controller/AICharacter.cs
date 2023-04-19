@@ -10,6 +10,9 @@ public class AICharacter : CharacterMovement
 
     [Tooltip("The rate at which the enemy attacks (lower = faster)")]
     public float attackRate;
+
+    public float maxDistance = 10;
+
     public float attackDistance = 3;
 
     public bool ableToAttk = true; //bool that states whether the entity is able to attack

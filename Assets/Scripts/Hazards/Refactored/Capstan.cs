@@ -16,5 +16,6 @@ public class Capstan : Hazard
     void FixedUpdate()
     {
         rb.angularVelocity = new Vector3(0, rotationSpeed, 0);
+        kbMod = rotationSpeed;
     }
 }

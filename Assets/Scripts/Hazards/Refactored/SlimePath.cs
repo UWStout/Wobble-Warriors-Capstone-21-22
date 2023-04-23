@@ -33,7 +33,10 @@ public class SlimePath : MonoBehaviour
     void FixedUpdate()
     {
         Slime.transform.position = Vector3.SmoothDamp(Slime.transform.position, WaypointList[CurrentPoint], ref Vel, Damper);
-        Slime.transform.rotation = Quaternion.LookRotation(Vel);
+        if (Vector3.Magnitude(Vel) > 0)
+        {
+            Slime.transform.rotation = Quaternion.LookRotation(Vel);
+        }
         if (Vector3.Magnitude(Slime.transform.position - WaypointList[CurrentPoint]) < Precision)
         {
             currentTime += Time.deltaTime;

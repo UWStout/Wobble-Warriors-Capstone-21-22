@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Capstan : Hazard
 {
-
+    [SerializeField] GameObject CapstanArms=null;
     [SerializeField] float rotationSpeed = 10;
     private Rigidbody rb;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        if (CapstanArms != null)
+        {
+            rb = CapstanArms.GetComponent<Rigidbody>();
+        }
     }
 
     void FixedUpdate()

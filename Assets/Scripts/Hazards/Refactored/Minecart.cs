@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Minecart : MonoBehaviour
 {
-    [SerializeField] GameObject StartTunnel;
+    [SerializeField] GameObject StartTunnel=null;
     Vector3 StartPoint;
-    [SerializeField] GameObject EndTunnel;
+    [SerializeField] GameObject EndTunnel=null;
     Vector3 EndPoint;
     [SerializeField] GameObject Cart;
     [SerializeField, Range(0.0f, 30.0f), Tooltip("How long between runs")]float Delay= 1;
@@ -15,8 +15,14 @@ public class Minecart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartPoint = StartTunnel.transform.position;
-        EndPoint = EndTunnel.transform.position;
+        if (StartTunnel != null)
+        {
+            StartPoint = StartTunnel.transform.position;
+        }
+        if (EndTunnel != null)
+        {
+            EndPoint = EndTunnel.transform.position;
+        }
     }
 
     // Update is called once per frame

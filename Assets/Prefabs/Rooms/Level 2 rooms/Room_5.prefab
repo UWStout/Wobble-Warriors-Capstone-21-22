@@ -1384,19 +1384,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DesiredHeight: 3
---- !u!114 &5267846846756187226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9184840326249310256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DesiredHeight: 3
 --- !u!65 &4179474080680217878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1410,6 +1397,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18.132603, y: 0.7974361, z: 58.43491}
   m_Center: {x: 0, y: 0.0000019073485, z: 23.056303}
+--- !u!114 &5267846846756187226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9184840326249310256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredHeight: 3
 --- !u!1001 &83923101579567811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4421,6 +4421,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8375792820974629514}
     m_Modifications:
+    - target: {fileID: 1661074219136558585, guid: 909cc3ab212804640b15c86910902596, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523598611882504348, guid: 909cc3ab212804640b15c86910902596, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6292762927298581720, guid: 909cc3ab212804640b15c86910902596, type: 3}
       propertyPath: m_Name
       value: WoodBeams (4)
@@ -6563,6 +6571,10 @@ PrefabInstance:
     - target: {fileID: 2463137668149951298, guid: fe44174ec45ec9a4c86ef2b93b0218bd, type: 3}
       propertyPath: m_Name
       value: BeamSlimSet (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818266341005003868, guid: fe44174ec45ec9a4c86ef2b93b0218bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe44174ec45ec9a4c86ef2b93b0218bd, type: 3}

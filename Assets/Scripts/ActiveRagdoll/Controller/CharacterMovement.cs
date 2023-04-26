@@ -20,6 +20,9 @@ public class CharacterMovement : MonoBehaviour
     public bool isEnemy = false;
 
     public Vector3 moveVector;
+
+    private Quaternion offset;
+
     private Quaternion targetRotation;
     private Rigidbody rb;
 
@@ -61,6 +64,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
+        offset = transform.rotation;
         source = GetComponentInParent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         if (animator && GetComponent<TestBossAI>() == null)
@@ -80,7 +84,7 @@ public class CharacterMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime); //smoothly rotate to target rotation
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation * offset, rotateSpeed * Time.deltaTime); //smoothly rotate to target rotation
         rb.velocity = new Vector3(moveVector.x, rb.velocity.y, moveVector.z);
 
         if (health <= 0)

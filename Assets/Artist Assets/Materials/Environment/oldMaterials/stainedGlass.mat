@@ -20,9 +20,8 @@ Material:
     RenderType: Transparent
   disabledShaderPasses:
   - RayTracingPrepass
-  - TransparentDepthPrepass
-  - MOTIONVECTORS
   - TransparentBackface
+  - MOTIONVECTORS
   - TransparentDepthPostpass
   m_SavedProperties:
     serializedVersion: 3
@@ -32,9 +31,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: d3d8816a2fb9fd8458399d9b04d5dc36, type: 3}
+        m_Texture: {fileID: 2800000, guid: e1d4038e3b7debb4b9c7f09f33089c20, type: 3}
         m_Scale: {x: 0.79, y: 1}
-        m_Offset: {x: 0.09, y: 0}
+        m_Offset: {x: 0.1, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -68,7 +67,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d3d8816a2fb9fd8458399d9b04d5dc36, type: 3}
+        m_Texture: {fileID: 2800000, guid: e1d4038e3b7debb4b9c7f09f33089c20, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -215,7 +214,7 @@ Material:
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
-    - _TransparentDepthPrepassEnable: 0
+    - _TransparentDepthPrepassEnable: 1
     - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0

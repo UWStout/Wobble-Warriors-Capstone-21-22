@@ -7,9 +7,9 @@ public class Portal : MonoBehaviour
     public static bool nowLevel2 = false;
     public Director director;
 
-    [SerializeField] private RollTheCredits lCurtainDrop;
-    [SerializeField] private RollTheCredits rCurtainDrop;
-    [SerializeField] private RollTheCredits tCurtainDrop;
+    [SerializeField] private RollTheCredits lCurtainDrop = null;
+    [SerializeField] private RollTheCredits rCurtainDrop = null;
+    [SerializeField] private RollTheCredits tCurtainDrop = null;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,13 +32,13 @@ public class Portal : MonoBehaviour
         if (boi!=null)
         {
             string sceneName = SceneManager.GetActiveScene().name;
-            if(sceneName == "Level_1")
+            if(sceneName == "Level_T")
             {
                 nowLevel2 = true;
                 //SceneManager.LoadSceneAsync("Level_2", LoadSceneMode.Single);
-                StartCoroutine(CurtainCall("Level_2"));
+                StartCoroutine(CurtainCall("Level_X"));
             }
-            else if (sceneName == "Level_2")
+            else if (sceneName == "Level_X")
             {
                 //SceneManager.LoadSceneAsync("WinScreen", LoadSceneMode.Single);
                 StartCoroutine(CurtainCall("WinScreen"));
@@ -61,9 +61,12 @@ public class Portal : MonoBehaviour
     IEnumerator CurtainCall(string sceneName)
     {
         //bring the curtains down
-        lCurtainDrop.reverseMove();
-        rCurtainDrop.reverseMove();
-        tCurtainDrop.reverseMove();
+        if (lCurtainDrop != null)
+            lCurtainDrop.reverseMove();
+        if (rCurtainDrop != null)
+            rCurtainDrop.reverseMove();
+        if (lCurtainDrop != null)
+            tCurtainDrop.reverseMove();
         yield return new WaitForSeconds(.5f);
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
     }

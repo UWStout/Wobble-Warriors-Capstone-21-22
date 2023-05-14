@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2.4895937, g: 1.5902176, b: 1.1781852, a: 1}
+  m_IndirectSpecularColor: {r: 2.4503436, g: 1.5904236, b: 1.232481, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -694,7 +694,8 @@ MonoBehaviour:
   cleared: 0
   MaxGobs: 8
   GobStopper: {fileID: 0}
-  EnemyCharacter: {fileID: 0}
+  EnemyCharacter:
+  - {fileID: 0}
   leash: {x: 25, y: 100, z: 25}
   SpawnRadius: 5
   isBossRoom: 0
@@ -1169,7 +1170,8 @@ MonoBehaviour:
   cleared: 0
   MaxGobs: 8
   GobStopper: {fileID: 0}
-  EnemyCharacter: {fileID: 0}
+  EnemyCharacter:
+  - {fileID: 0}
   leash: {x: 15, y: 100, z: 10}
   SpawnRadius: 5
   isBossRoom: 0
@@ -1668,7 +1670,8 @@ MonoBehaviour:
   cleared: 0
   MaxGobs: 8
   GobStopper: {fileID: 0}
-  EnemyCharacter: {fileID: 0}
+  EnemyCharacter:
+  - {fileID: 0}
   leash: {x: 0, y: 0, z: 0}
   SpawnRadius: 5
   isBossRoom: 0
@@ -2181,11 +2184,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1289752554450329758, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1710812849591716013, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
       propertyPath: m_Name
       value: Tutorial_Room_04
       objectReference: {fileID: 0}
+    - target: {fileID: 2095306382585046323, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2495974707625591011, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
+      propertyPath: row
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4716820155849093272, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112352708126201800, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195121529608500316, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
@@ -2235,33 +2258,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
---- !u!1 &1418588283 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1710812849591716013, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
-  m_PrefabInstance: {fileID: 1418588282}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1418588284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418588283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796e577edc54e9d43b11d75e6751dc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  row: 2
-  column: 0
-  cleared: 0
-  MaxGobs: 8
-  GobStopper: {fileID: 0}
-  EnemyCharacter: {fileID: 0}
-  leash: {x: 10, y: 100, z: 10}
-  SpawnRadius: 5
-  isBossRoom: 0
-  HazardList: []
 --- !u!1001 &1465818419
 PrefabInstance:
   m_ObjectHideFlags: 0

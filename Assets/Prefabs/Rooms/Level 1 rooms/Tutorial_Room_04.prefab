@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9208465160545001629}
+  - component: {fileID: 2495974707625591011}
   m_Layer: 0
   m_Name: Tutorial_Room_04
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,9 +73,32 @@ Transform:
   - {fileID: 1131995679458767800}
   - {fileID: 1950987338691678105}
   - {fileID: 5633358293324018928}
+  - {fileID: 4221726394193350261}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2495974707625591011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710812849591716013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796e577edc54e9d43b11d75e6751dc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  row: 0
+  column: 0
+  cleared: 1
+  MaxGobs: 0
+  GobStopper: {fileID: 4676942569555279875}
+  EnemyCharacter: []
+  leash: {x: 11.75, y: 79.9, z: 12.45}
+  SpawnRadius: 5
+  isBossRoom: 0
+  HazardList: []
 --- !u!1 &1761897123080289160
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +250,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 195.19652, y: 4477.5234, z: 12.243201}
   m_Center: {x: -2.0107652e-11, y: 2238.2612, z: 0.29294425}
+--- !u!1 &4676942569555279875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4221726394193350261}
+  m_Layer: 0
+  m_Name: GobStopper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4221726394193350261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676942569555279875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.88, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9208465160545001629}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5762761112602819096
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +482,7 @@ GameObject:
   - component: {fileID: 8438538618951448975}
   - component: {fileID: 2948653354217093121}
   - component: {fileID: 8535070195949952812}
+  - component: {fileID: 6145668210505131200}
   m_Layer: 0
   m_Name: BWall
   m_TagString: Wall
@@ -512,6 +567,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DesiredHeight: -9
+--- !u!64 &6145668210505131200
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451739851241981275}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2381890483179193753, guid: cedf0fa08965f9e45865e4010fdad62f, type: 3}
 --- !u!1001 &86813225260979797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2432,6 +2501,10 @@ PrefabInstance:
       value: portalNew
       objectReference: {fileID: 0}
     - target: {fileID: 293561171401619969, guid: 570bfcc91d376fe4d97bad772f1f1ba3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 879668430209127151, guid: 570bfcc91d376fe4d97bad772f1f1ba3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}

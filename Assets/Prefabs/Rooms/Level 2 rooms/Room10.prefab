@@ -120,7 +120,8 @@ MonoBehaviour:
   cleared: 0
   MaxGobs: 8
   GobStopper: {fileID: 0}
-  EnemyCharacter: {fileID: 0}
+  EnemyCharacter:
+  - {fileID: 0}
   leash: {x: 0, y: 0, z: 0}
   SpawnRadius: 5
   isBossRoom: 0
@@ -409,8 +410,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.653934, y: 10, z: 1.0000004}
-  m_Center: {x: 0, y: -0.3644042, z: -2.4915438}
+  m_Size: {x: 19.653934, y: 32.889236, z: 1.0000005}
+  m_Center: {x: 0, y: 11.080214, z: -2.4915438}
 --- !u!114 &8761018224490564891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,6 +727,7 @@ GameObject:
   - component: {fileID: 993213654607571976}
   - component: {fileID: 4247464540169960240}
   - component: {fileID: 8400196234003763119}
+  - component: {fileID: 6795190091099648192}
   m_Layer: 0
   m_Name: Room10_Wall
   m_TagString: Wall
@@ -823,6 +825,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DesiredHeight: 3
+--- !u!65 &6795190091099648192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840906235104796951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 21.684902, y: 39.627323, z: 1.4452019}
+  m_Center: {x: 9.520689, y: 16.487585, z: 10.853926}
 --- !u!1 &5137810294636039962
 GameObject:
   m_ObjectHideFlags: 0

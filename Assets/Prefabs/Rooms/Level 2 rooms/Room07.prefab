@@ -114,7 +114,8 @@ MonoBehaviour:
   cleared: 0
   MaxGobs: 8
   GobStopper: {fileID: 0}
-  EnemyCharacter: {fileID: 0}
+  EnemyCharacter:
+  - {fileID: 0}
   leash: {x: 25.19, y: 100.03, z: 10.1}
   SpawnRadius: 5
   isBossRoom: 0
@@ -1091,6 +1092,7 @@ GameObject:
   - component: {fileID: 113381334105073822}
   - component: {fileID: 3348494292364758074}
   - component: {fileID: 7216440954061646901}
+  - component: {fileID: 556503427733645815}
   m_Layer: 0
   m_Name: Room7_FrontWallRight
   m_TagString: Wall
@@ -1174,6 +1176,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 17.183563, y: 66.98936, z: 0.9647789}
   m_Center: {x: 8.589388, y: 34.55473, z: 6.1778955}
+--- !u!114 &556503427733645815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920796459705691505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredHeight: 3
 --- !u!1 &3105720207403862525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1201,7 @@ GameObject:
   - component: {fileID: 8282708870131804375}
   - component: {fileID: 3473017318947564249}
   - component: {fileID: 6351305321265776790}
+  - component: {fileID: 659409787838703265}
   m_Layer: 0
   m_Name: Room7_FrontWallLeft
   m_TagString: Wall
@@ -1269,6 +1285,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16.89284, y: 67.76586, z: 0.94067574}
   m_Center: {x: -8.430535, y: 33.759724, z: 6.1658688}
+--- !u!114 &659409787838703265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3105720207403862525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredHeight: 3
 --- !u!1 &3396935787773269329
 GameObject:
   m_ObjectHideFlags: 0

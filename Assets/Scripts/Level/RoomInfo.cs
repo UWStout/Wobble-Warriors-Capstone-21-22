@@ -20,7 +20,7 @@ public class RoomInfo : MonoBehaviour
     //Reference to the spawn point/parent object where enemies are spawned, is attached in inspector. This is where spawned enemies are parented to and positioned relative to.
     [SerializeField] GameObject GobStopper;
     //Reference to enemy object. This is what is spawned when spawn gob is called
-    [SerializeField] GameObject EnemyCharacter;
+    [SerializeField] List<GameObject> EnemyCharacter = new List<GameObject>();
     //Vector 3 set in editor. This is how far away an enemy can be from a room before it is teleoprted to the GobStopper's position
     [SerializeField] Vector3 leash= new Vector3(0.0f, 0.0f, 0.0f);
     //Float set in editor. This is The maximum distance in the x and z axes from the Gobstopper that an enemy can be spawned
@@ -154,14 +154,21 @@ public class RoomInfo : MonoBehaviour
     //Spawn an enemy goblin at the gobstopper's location with an offset from it's center
     public GameObject SpawnGob(Vector3 offset)
     {
-        //Create a new enemy at the gobstopper and store it's reference
-        GameObject newGob = Instantiate(EnemyCharacter, GobStopper.transform);
-        //Move the new enemy to a passed in position
-        newGob.transform.position += offset;
-        //Set the new enemy's rotation to a random direction
-        newGob.transform.rotation = Quaternion.Euler(0, 0, 0);
-        //Return the new enemy
-        return newGob;
+        if (EnemyCharacter != null && EnemyCharacter.Count > 0)
+        {
+            //Create a new enemy at the gobstopper and store it's reference
+            GameObject newGob = Instantiate(EnemyCharacter[Random.Range(0, EnemyCharacter.Count)], GobStopper.transform);
+            //Move the new enemy to a passed in position
+            newGob.transform.position += offset;
+            //Set the new enemy's rotation to a random direction
+            newGob.transform.rotation = Quaternion.Euler(0, 0, 0);
+            //Return the new enemy
+            return newGob;
+        }
+        else
+        {
+            return null;
+        }
     }
     //Getter for hazard list
     public List<DisableHazards> getHazardList()

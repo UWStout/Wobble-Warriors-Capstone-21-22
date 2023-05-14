@@ -13,6 +13,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 17.223658, y: 0.7974361, z: 47.22002}
   m_Center: {x: 3.9412546, y: -3.2473265e-14, z: 18.285107}
+--- !u!114 &4723160229590432263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19584563032870134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredHeight: 3
 --- !u!1 &162191215567396919
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +669,10 @@ MonoBehaviour:
   cleared: 0
   MaxGobs: 8
   GobStopper: {fileID: 1388832749681403960}
-  EnemyCharacter: {fileID: 5637542500453407579, guid: f65061c55ff989c4eae6b43784bf6863, type: 3}
+  EnemyCharacter:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   leash: {x: 10, y: 100, z: 10}
   SpawnRadius: 5
   isBossRoom: 0
@@ -1628,14 +1644,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c8a211f10ce01641b33214dcc0293fe, type: 3}
---- !u!1 &1160307818333751849 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c8a211f10ce01641b33214dcc0293fe, type: 3}
-  m_PrefabInstance: {fileID: 2079348019620837240}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1968615632045084819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3c8a211f10ce01641b33214dcc0293fe, type: 3}
+  m_PrefabInstance: {fileID: 2079348019620837240}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1160307818333751849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c8a211f10ce01641b33214dcc0293fe, type: 3}
   m_PrefabInstance: {fileID: 2079348019620837240}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2163698624911262016

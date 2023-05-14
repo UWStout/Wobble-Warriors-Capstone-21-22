@@ -2144,6 +2144,8 @@ GameObject:
   - component: {fileID: 785173862499516911}
   - component: {fileID: 8154881827034753028}
   - component: {fileID: 1481164221186635653}
+  - component: {fileID: 1350592570722486272}
+  - component: {fileID: 296212340359590663}
   m_Layer: 0
   m_Name: Room8_Wall
   m_TagString: Wall
@@ -2228,6 +2230,32 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6333541748274023909, guid: 5337bbd840093c04bb9cf9fc757b1a94, type: 3}
+--- !u!65 &1350592570722486272
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134136549660140841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22.170868, y: 47.07519, z: 1.0939379}
+  m_Center: {x: 0.24504755, y: 23.53826, z: 7.8539376}
+--- !u!114 &296212340359590663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134136549660140841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredHeight: 3
 --- !u!1 &6203708647803525656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,7 +3138,8 @@ MonoBehaviour:
   cleared: 0
   MaxGobs: 8
   GobStopper: {fileID: 0}
-  EnemyCharacter: {fileID: 0}
+  EnemyCharacter:
+  - {fileID: 0}
   leash: {x: 14.8, y: 99.44, z: 14.45}
   SpawnRadius: 5
   isBossRoom: 0

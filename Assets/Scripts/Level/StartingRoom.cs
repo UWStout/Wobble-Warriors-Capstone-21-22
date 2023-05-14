@@ -15,5 +15,6 @@ public class StartingRoom : MonoBehaviour
         dir.doRetry();
         dir.ResetCurrentExtraLife();
         dir.ResetPlayerWeapons();
+        dir.ActivateRoom();
     }
 }

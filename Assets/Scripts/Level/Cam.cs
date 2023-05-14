@@ -110,6 +110,8 @@ public class Cam : MonoBehaviour
         //Check the distance of every player from the camera
         desiredFOV = Camera.fieldOfView;
         float accel = -Mathf.Infinity;
+        Debug.Log(director.PlayerList.Count+" Players");
+        Debug.Log(director.GetGobs().Count + " Gobs");
         foreach (GameObject p in director.PlayerList)
         {
             Vector3 screenPos = Camera.WorldToScreenPoint(p.transform.position);
@@ -128,19 +130,21 @@ public class Cam : MonoBehaviour
         }
         foreach (GameObject p in director.GetGobs())
         {
-            Vector3 screenPos = Camera.WorldToScreenPoint(p.transform.position);
-            //get the distance of the player from the center of the screen
-            float distance;
-            //x axis
-            distance = Mathf.Abs((screenPos.x / Camera.pixelWidth) - .5f);
-            //y axis
-            distance = Mathf.Max(Mathf.Abs((screenPos.y / Camera.pixelHeight) - .5f), distance);
-            //Debug.Log("Player " + p.name + " is this far away from the center: " + distance);
-            //Account for the margin
-            distance -= ScreenCenterRadius;
-            //overwrite with max value
-            accel = Mathf.Max(accel, distance);
-
+            if (p.activeSelf)
+            {
+                Vector3 screenPos = Camera.WorldToScreenPoint(p.transform.position);
+                //get the distance of the player from the center of the screen
+                float distance;
+                //x axis
+                distance = Mathf.Abs((screenPos.x / Camera.pixelWidth) - .5f);
+                //y axis
+                distance = Mathf.Max(Mathf.Abs((screenPos.y / Camera.pixelHeight) - .5f), distance);
+                //Debug.Log("Player " + p.name + " is this far away from the center: " + distance);
+                //Account for the margin
+                distance -= ScreenCenterRadius;
+                //overwrite with max value
+                accel = Mathf.Max(accel, distance);
+            }
         }
         desiredFOV = (Camera.fieldOfView + accel * 10 * FovVelocity);
         return closest;

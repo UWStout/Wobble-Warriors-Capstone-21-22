@@ -114,7 +114,8 @@ public class Cam : MonoBehaviour
         Debug.Log(director.GetGobs().Count + " Gobs");
         foreach (GameObject p in director.PlayerList)
         {
-            Vector3 screenPos = Camera.WorldToScreenPoint(p.transform.position);
+            GameObject q = p.GetComponentInChildren<CharacterMovement>().gameObject;
+            Vector3 screenPos = Camera.WorldToScreenPoint(q.transform.position);
             //get the distance of the player from the center of the screen
             float distance;
             //x axis
@@ -132,7 +133,8 @@ public class Cam : MonoBehaviour
         {
             if (p.activeSelf)
             {
-                Vector3 screenPos = Camera.WorldToScreenPoint(p.transform.position);
+                GameObject q = p.GetComponentInChildren<CharacterMovement>().gameObject;
+                Vector3 screenPos = Camera.WorldToScreenPoint(q.transform.position);
                 //get the distance of the player from the center of the screen
                 float distance;
                 //x axis

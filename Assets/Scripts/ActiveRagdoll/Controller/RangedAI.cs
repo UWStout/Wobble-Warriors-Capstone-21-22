@@ -25,6 +25,10 @@ public class RangedAI : AICharacter
         {
             SetMoveDirection((transform.position - currentTarget.transform.position).normalized);
         }
+        else if(distance > maxDistance * 2)
+        {
+            SetMoveDirection(-(transform.position - currentTarget.transform.position).normalized);
+        }
         else
         {
             SetMoveDirection(Vector3.zero);

@@ -63,7 +63,7 @@ public class Cam : MonoBehaviour
         //Generate a ray from the camera to that object
         Ray r = new Ray(transform.position, closest - this.transform.position);
         //Store every object in that raycast in hits
-        RaycastHit[] hits= Physics.RaycastAll(r,(closest - this.transform.position).magnitude);
+        RaycastHit[] hits= Physics.RaycastAll(r,(closest - this.transform.position).magnitude, -1, QueryTriggerInteraction.Collide);
         //on a hit, if the hit object has the Scoot component, tell it to move.
         if(hits.Length>0)
         {

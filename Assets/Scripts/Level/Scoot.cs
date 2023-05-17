@@ -7,7 +7,7 @@ public class Scoot : MonoBehaviour
     private Vector3 OrPos;
     private Vector3 TargetPos;
     private Vector3 z = Vector3.zero;
-    [SerializeField] float damper = .1f;
+    [SerializeField] float damper = 0f;
     [SerializeField] float DesiredHeight = 3f;
     [SerializeField] bool up = false;
     // Start is called before the first frame update

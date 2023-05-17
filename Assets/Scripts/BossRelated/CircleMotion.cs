@@ -12,7 +12,7 @@ public class CircleMotion : MonoBehaviour
 
     void Start()
     {
-        center = FindObjectOfType<BossFetcher>().transform;
+        center = GameObject.FindGameObjectWithTag("Pillar").transform;
         transform.position = (transform.position - center.position).normalized * radius + center.position;
     }
 

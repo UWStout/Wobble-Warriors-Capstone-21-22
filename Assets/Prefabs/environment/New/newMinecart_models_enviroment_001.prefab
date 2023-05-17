@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8097824997127571577}
   - component: {fileID: 2049911370404317878}
   - component: {fileID: 2549565418095057688}
+  - component: {fileID: 8594538554962639489}
   m_Layer: 0
   m_Name: frontWheels
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8594538554962639489
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416638187109008531}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8116375446042991498, guid: 34e92fa7d35cdbe48a1a81f212c54139, type: 3}
 --- !u!1 &4062952632792617417
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +109,7 @@ GameObject:
   - component: {fileID: 6093346802686075678}
   - component: {fileID: 4395346447263412912}
   - component: {fileID: 4007614507833323921}
+  - component: {fileID: 4632198808019457102}
   m_Layer: 0
   m_Name: minecartBody
   m_TagString: Untagged
@@ -166,6 +182,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4632198808019457102
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4062952632792617417}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2886077364330557609, guid: 34e92fa7d35cdbe48a1a81f212c54139, type: 3}
 --- !u!1 &5808884796266402020
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +240,7 @@ GameObject:
   - component: {fileID: 2401068939658693966}
   - component: {fileID: 2622588213361683024}
   - component: {fileID: 375899974097153376}
+  - component: {fileID: 1973990594650191590}
   m_Layer: 0
   m_Name: backWheels
   m_TagString: Untagged
@@ -282,3 +313,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1973990594650191590
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8346193493836527350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -782626154022354759, guid: 34e92fa7d35cdbe48a1a81f212c54139, type: 3}

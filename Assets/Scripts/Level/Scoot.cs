@@ -20,7 +20,8 @@ public class Scoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, TargetPos, ref z, damper);
+        //transform.position = Vector3.SmoothDamp(transform.position, TargetPos, ref z, damper);
+        transform.position = Vector3.Lerp(transform.position, TargetPos, damper);
         unmove();
     }
     public void move()

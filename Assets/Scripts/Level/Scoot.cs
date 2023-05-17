@@ -7,7 +7,7 @@ public class Scoot : MonoBehaviour
     private Vector3 OrPos;
     private Vector3 TargetPos;
     private Vector3 z = Vector3.zero;
-    [SerializeField] float damper = .1f;
+    [SerializeField] float damper = 0f;
     [SerializeField] float DesiredHeight = 3f;
     [SerializeField] bool up = false;
     // Start is called before the first frame update
@@ -20,7 +20,8 @@ public class Scoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, TargetPos, ref z, damper);
+        //transform.position = Vector3.SmoothDamp(transform.position, TargetPos, ref z, damper);
+        transform.position = Vector3.Lerp(transform.position, TargetPos, damper);
         unmove();
     }
     public void move()

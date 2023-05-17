@@ -31,7 +31,7 @@ public class Scoot : MonoBehaviour
         }
         else
         {
-            TargetPos.y = Mathf.Max(TargetPos.y - .2f, OrPos.y - (10 + DesiredHeight));
+            TargetPos.y = Mathf.Max(TargetPos.y - .2f, OrPos.y + DesiredHeight);
         }
 
     }

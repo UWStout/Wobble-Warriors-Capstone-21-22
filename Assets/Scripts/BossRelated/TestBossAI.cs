@@ -6,6 +6,7 @@ public class TestBossAI : CharacterMovement
 {
     public bool playerInSight;
     public bool longRangeSight = false;
+    public bool canBeDamanged = false;
     [SerializeField] GameObject followTarget;
     [SerializeField] GameObject chargeTarget;
     public GameObject targetedPlayer;
@@ -96,11 +97,6 @@ public class TestBossAI : CharacterMovement
             if (charging)
             {
                 //call pillar function
-                BossPillar pillar = FindObjectOfType<BossPillar>();
-                if (pillar)
-                {
-                    pillar.DoStunEffects();
-                }
                 StartCoroutine(Stun(10.0f));
             }
         }

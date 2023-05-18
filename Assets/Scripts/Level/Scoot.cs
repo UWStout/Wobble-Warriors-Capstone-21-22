@@ -7,41 +7,45 @@ public class Scoot : MonoBehaviour
     private Vector3 OrPos;
     private Vector3 TargetPos;
     private Vector3 z = Vector3.zero;
-    [SerializeField] float damper = 0f;
-    [SerializeField] float DesiredHeight = 3f;
+    [SerializeField] float MoveDuration = 1f;
+    [SerializeField] float Distance = 7f;
     [SerializeField] bool up = false;
+    float dt = 0;
+    bool InTheWay = false;
     // Start is called before the first frame update
     void Start()
     {
         OrPos = transform.position;
         TargetPos = OrPos;
+        if (up)
+        {
+            OrPos.y += Distance;
+        }
+        else
+        {
+            OrPos.y -= Distance;
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //transform.position = Vector3.SmoothDamp(transform.position, TargetPos, ref z, damper);
-        transform.position = Vector3.Lerp(transform.position, TargetPos, damper);
-        unmove();
-    }
-    public void move()
-    {
-        if (!up) 
-        { 
-            TargetPos.y = Mathf.Max(TargetPos.y - .2f, OrPos.y - (10 - DesiredHeight));
+        if (InTheWay)
+        {
+            dt += Time.deltaTime;
         }
         else
         {
-            TargetPos.y = Mathf.Max(TargetPos.y - .2f, OrPos.y + DesiredHeight);
+            dt -= Time.deltaTime;
         }
-
+        dt = Mathf.Clamp(dt, 0, MoveDuration);
+        //transform.position = Vector3.SmoothDamp(transform.position, TargetPos, ref z, damper);
+        transform.position = Vector3.Lerp(transform.position, TargetPos, dt/MoveDuration);
+        InTheWay = false;
     }
-    public void unmove()
+    public void SetInTheWay()
     {
-        TargetPos.y = Mathf.Min(TargetPos.y + .1f, OrPos.y);
-    }
-    public void ResetTargetPos()
-    {
-        TargetPos = OrPos;
+        InTheWay = true;
     }
 }

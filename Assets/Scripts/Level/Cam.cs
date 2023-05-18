@@ -72,7 +72,7 @@ public class Cam : MonoBehaviour
                 if (hit.transform.GetComponent<Scoot>())
                 {
                     Scoot s = hit.transform.GetComponent<Scoot>();
-                    s.move();
+                    s.SetInTheWay();
                 }
             }
         }

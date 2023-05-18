@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4695628082623567411}
   - component: {fileID: 3028538712052851158}
+  - component: {fileID: 5539244782152901543}
   m_Layer: 0
   m_Name: chandelier
   m_TagString: Untagged
@@ -73,9 +74,24 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 2.7887373
-  m_Height: 11.677305
+  m_Height: 13.862473
   m_Direction: 1
-  m_Center: {x: -0.12979794, y: 4.772234, z: 0}
+  m_Center: {x: -0.12979794, y: 3.6796503, z: 0}
+--- !u!114 &5539244782152901543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354591978835868372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveDuration: 1
+  Distance: 7
+  up: 1
 --- !u!1001 &880410204932782432
 PrefabInstance:
   m_ObjectHideFlags: 0

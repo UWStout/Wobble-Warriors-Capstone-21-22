@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 3569365383842048852}
   - component: {fileID: 9053459489167146257}
   - component: {fileID: 5427747350866009834}
+  - component: {fileID: 1276901102361816403}
   m_Layer: 0
   m_Name: Room8FrontWall
   m_TagString: Wall
@@ -544,6 +545,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 19.631882, y: 10, z: 1}
   m_Center: {x: 0.00000047683716, y: 0, z: -0.00000037252903}
+--- !u!114 &1276901102361816403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3205165159031099458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveDuration: 1
+  Distance: 7
+  up: 0
 --- !u!1 &3292332764286220483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,8 +1207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damper: 0
-  DesiredHeight: 3
+  MoveDuration: 1
+  Distance: 7
   up: 0
 --- !u!1 &6203708647803525656
 GameObject:

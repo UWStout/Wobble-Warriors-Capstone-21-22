@@ -19,17 +19,17 @@ public class Scoot : MonoBehaviour
         TargetPos = OrPos;
         if (up)
         {
-            OrPos.y += Distance;
+            TargetPos.y += Distance;
         }
         else
         {
-            OrPos.y -= Distance;
+            TargetPos.y -= Distance;
         }
         
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (InTheWay)
         {
@@ -40,8 +40,14 @@ public class Scoot : MonoBehaviour
             dt -= Time.deltaTime;
         }
         dt = Mathf.Clamp(dt, 0, MoveDuration);
-        //transform.position = Vector3.SmoothDamp(transform.position, TargetPos, ref z, damper);
-        transform.position = Vector3.Lerp(transform.position, TargetPos, dt/MoveDuration);
+        if (InTheWay)
+        {
+            transform.position = Vector3.Lerp(transform.position, TargetPos, dt/MoveDuration);
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, OrPos, 1-dt/MoveDuration);
+        }
         InTheWay = false;
     }
     public void SetInTheWay()

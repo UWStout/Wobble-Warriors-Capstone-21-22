@@ -19,6 +19,8 @@ public class Weapon : MonoBehaviour
     private bool canHit = false;
     [SerializeField] AudioClip hitSound;
     [SerializeField] GameObject hitVFX;
+    
+    //i dont remember the names of these things, but they are important to remember
     public float Damage
     {
         get { return damage; }

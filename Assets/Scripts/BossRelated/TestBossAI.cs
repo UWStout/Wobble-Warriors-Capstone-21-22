@@ -6,7 +6,6 @@ public class TestBossAI : CharacterMovement
 {
     public bool playerInSight;
     public bool longRangeSight = false;
-    public bool canBeDamanged = false;
     [SerializeField] GameObject followTarget;
     [SerializeField] GameObject chargeTarget;
     public GameObject targetedPlayer;
@@ -96,7 +95,6 @@ public class TestBossAI : CharacterMovement
         {
             if (charging)
             {
-                //call pillar function
                 StartCoroutine(Stun(10.0f));
             }
         }
@@ -129,7 +127,7 @@ public class TestBossAI : CharacterMovement
     {
         Debug.Log("Stopped");
         moveVector = new Vector3(0f, 0f, 0f);
-        stunned = true;
+        //stunned = true;
         charging = false;
         yield return new WaitForSeconds(stopTime);
         stunned = false;

@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 7553667182761068884}
   - component: {fileID: 1746150143515825017}
   - component: {fileID: 2130631234143327795}
-  - component: {fileID: 2780750624461450981}
   - component: {fileID: 2780750624461450969}
   - component: {fileID: 2780750624461450980}
   - component: {fileID: 2780750624461450982}
@@ -200,22 +199,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &2780750624461450981
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5555688009725334156}
-  serializedVersion: 2
-  m_Mass: 1e+9
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!136 &2780750624461450969
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -355,5 +338,4 @@ MonoBehaviour:
   knockback: 25
   kbMod: 1
   HitParticleFX: {fileID: 0}
-  CapstanArms: {fileID: 5555688009725334156}
   rotationSpeed: 10

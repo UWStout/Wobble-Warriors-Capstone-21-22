@@ -42,17 +42,17 @@ public class WinScreen : MonoBehaviour
             {
                 soundEffectSource.PlayOneShot(click);
             }
-            //Check whether the players lost in level 1 or level 2 and load whichever scene it was
+            /*//Check whether the players lost in level 1 or level 2 and load whichever scene it was
             if (Portal.nowLevel2 == false)
             {
                 StartCoroutine(CurtainCall("Level_T"));
                 //SceneManager.LoadScene("Level_1");
             }
             else
-            {
+            {*/
                 StartCoroutine(CurtainCall("Level_X"));
                 //SceneManager.LoadScene("Level_2");
-            }
+            //}
         }
     }
     //Function Called when quit button is pressed

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2.4108748, g: 1.580061, b: 1.2666836, a: 1}
+  m_IndirectSpecularColor: {r: 2.4917803, g: 1.5923395, b: 1.180294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -764,34 +764,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44e638ce036c34142b2f015539713f2a, type: 3}
---- !u!1 &167006541 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1050314820860518816, guid: 44e638ce036c34142b2f015539713f2a, type: 3}
-  m_PrefabInstance: {fileID: 167006540}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &167006542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167006541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796e577edc54e9d43b11d75e6751dc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  row: 1
-  column: 0
-  cleared: 0
-  MaxGobs: 8
-  GobStopper: {fileID: 0}
-  EnemyCharacter:
-  - {fileID: 0}
-  leash: {x: 25, y: 100, z: 25}
-  SpawnRadius: 5
-  isBossRoom: 0
-  HazardList: []
 --- !u!4 &167006543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4832165057310361250, guid: 44e638ce036c34142b2f015539713f2a, type: 3}
@@ -850,7 +822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3599814534154133860, guid: 425b52ae8e9dd5c4d96cb4a3e24e70cc, type: 3}
       propertyPath: m_RootOrder
-      value: 109
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 3599814534154133860, guid: 425b52ae8e9dd5c4d96cb4a3e24e70cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1428,34 +1400,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 952b20f6e8b7b3e4b98eb698df2bb894, type: 3}
---- !u!1 &911394386 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7783988263090617323, guid: 952b20f6e8b7b3e4b98eb698df2bb894, type: 3}
-  m_PrefabInstance: {fileID: 911394385}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &911394387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911394386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796e577edc54e9d43b11d75e6751dc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  row: 1
-  column: 1
-  cleared: 0
-  MaxGobs: 8
-  GobStopper: {fileID: 0}
-  EnemyCharacter:
-  - {fileID: 0}
-  leash: {x: 15, y: 100, z: 10}
-  SpawnRadius: 5
-  isBossRoom: 0
-  HazardList: []
 --- !u!1 &961963465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,46 +2000,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b2c38dda07754f44b3d58274d984353, type: 3}
---- !u!1 &1080109843 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8329602026313208399, guid: 7b2c38dda07754f44b3d58274d984353, type: 3}
-  m_PrefabInstance: {fileID: 1080109842}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1080109844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080109843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cafed89ae3eac94438151930879da9ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1080109845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080109843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796e577edc54e9d43b11d75e6751dc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  row: 0
-  column: 0
-  cleared: 0
-  MaxGobs: 8
-  GobStopper: {fileID: 0}
-  EnemyCharacter:
-  - {fileID: 0}
-  leash: {x: 0, y: 0, z: 0}
-  SpawnRadius: 5
-  isBossRoom: 0
-  HazardList: []
 --- !u!1 &1127938707
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,7 +2157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3599814534154133860, guid: 425b52ae8e9dd5c4d96cb4a3e24e70cc, type: 3}
       propertyPath: m_RootOrder
-      value: 108
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 3599814534154133860, guid: 425b52ae8e9dd5c4d96cb4a3e24e70cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2853,7 +2757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3599814534154133860, guid: 425b52ae8e9dd5c4d96cb4a3e24e70cc, type: 3}
       propertyPath: m_RootOrder
-      value: 110
+      value: 103
       objectReference: {fileID: 0}
     - target: {fileID: 3599814534154133860, guid: 425b52ae8e9dd5c4d96cb4a3e24e70cc, type: 3}
       propertyPath: m_LocalPosition.x

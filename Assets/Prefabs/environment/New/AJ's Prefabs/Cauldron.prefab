@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 112770886855196343}
   - component: {fileID: 700075659467624075}
   - component: {fileID: 7295929287302063585}
+  - component: {fileID: 5127339420271609259}
   m_Layer: 0
   m_Name: Liquid
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5127339420271609259
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062253157386360340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9216810965846887918, guid: 9ea1578e82c44b94eac162a1b75ce68b, type: 3}
 --- !u!1 &2073704761418110486
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +174,7 @@ GameObject:
   - component: {fileID: 698585434834107245}
   - component: {fileID: 8066644698138031810}
   - component: {fileID: 9186254102308081832}
+  - component: {fileID: 9009989516010624956}
   m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
@@ -229,6 +245,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9009989516010624956
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919716287173309770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6659003102834268097, guid: 9ea1578e82c44b94eac162a1b75ce68b, type: 3}
 --- !u!1 &5031980328882070333
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +270,7 @@ GameObject:
   - component: {fileID: 5305740220670401525}
   - component: {fileID: 3538175385958648322}
   - component: {fileID: 1174713391355382699}
+  - component: {fileID: 1502524888926691226}
   m_Layer: 0
   m_Name: HandleConnector
   m_TagString: Untagged
@@ -310,6 +341,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1502524888926691226
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5031980328882070333}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6210372641585236274, guid: 9ea1578e82c44b94eac162a1b75ce68b, type: 3}
 --- !u!1 &6378697190766827497
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +448,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 72713781330414003, guid: 9ea1578e82c44b94eac162a1b75ce68b, type: 3}
 --- !u!1 &8157814527059178247
@@ -417,6 +462,7 @@ GameObject:
   - component: {fileID: 1010063741457027015}
   - component: {fileID: 5508089022766895434}
   - component: {fileID: 6100945369258321496}
+  - component: {fileID: 1507567344191419369}
   m_Layer: 0
   m_Name: Handle (1)
   m_TagString: Untagged
@@ -487,6 +533,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1507567344191419369
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157814527059178247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6659003102834268097, guid: 9ea1578e82c44b94eac162a1b75ce68b, type: 3}
 --- !u!1 &8161426802081864844
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +558,7 @@ GameObject:
   - component: {fileID: 8472381676050865394}
   - component: {fileID: 185491472730625568}
   - component: {fileID: 1590062604615985791}
+  - component: {fileID: 6085502898375736540}
   m_Layer: 0
   m_Name: HandleConnector (1)
   m_TagString: Untagged
@@ -568,3 +629,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6085502898375736540
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8161426802081864844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6210372641585236274, guid: 9ea1578e82c44b94eac162a1b75ce68b, type: 3}

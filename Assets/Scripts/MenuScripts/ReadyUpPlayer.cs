@@ -197,7 +197,7 @@ public class ReadyUpPlayer : MonoBehaviour
         }
         director.SetPlayerWeaponChoice(weapons);
         //SceneManager.LoadSceneAsync("Level_1", LoadSceneMode.Single);
-        StartCoroutine(CurtainCall("Level_X"));
+        StartCoroutine(CurtainCall("Level_T"));
     }
 
     public void backButton()

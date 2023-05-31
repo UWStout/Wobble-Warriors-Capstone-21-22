@@ -1337,10 +1337,10 @@ GameObject:
   - component: {fileID: 8203535490340416058}
   - component: {fileID: 4524552892494177812}
   - component: {fileID: 287078938649661369}
-  - component: {fileID: 6995854422780166068}
+  - component: {fileID: 63424875436470009}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1409,8 +1409,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6995854422780166068
-BoxCollider:
+--- !u!64 &63424875436470009
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1419,9 +1419,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3644.9736, y: 233.85509, z: 4049.3257}
-  m_Center: {x: -0.00048828125, y: -116.92754, z: -846.17035}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3067328889237152085, guid: 7b74643333dc8094d8aba315d6ac802b, type: 3}
 --- !u!1 &4450516612769682164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,7 +2050,7 @@ GameObject:
   - component: {fileID: 6943996933254666821}
   m_Layer: 0
   m_Name: fWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2242,7 +2243,7 @@ GameObject:
   - component: {fileID: 8524384274644931741}
   m_Layer: 0
   m_Name: bWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2620,7 +2621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7050674798412201358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 3.25}
+  m_LocalPosition: {x: 20, y: 5.01, z: 3.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 988949111139097768}
@@ -3265,7 +3266,7 @@ GameObject:
   - component: {fileID: 9015256581667856120}
   m_Layer: 0
   m_Name: tutorialStartRoom
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3448,7 +3449,7 @@ MonoBehaviour:
   MaxGobs: 0
   GobStopper: {fileID: 7050674798412201358}
   EnemyCharacter: []
-  leash: {x: 0, y: 0, z: 0}
+  leash: {x: 12, y: 100, z: 20}
   SpawnRadius: 5
   isBossRoom: 0
   HazardList: []
@@ -3549,7 +3550,7 @@ GameObject:
   - component: {fileID: 6575237805273520159}
   m_Layer: 0
   m_Name: sideWalls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

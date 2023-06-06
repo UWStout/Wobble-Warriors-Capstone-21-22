@@ -62,11 +62,17 @@ public class Portal : MonoBehaviour
     {
         //bring the curtains down
         if (lCurtainDrop != null)
+        {
             lCurtainDrop.reverseMove();
-        if (rCurtainDrop != null)
-            rCurtainDrop.reverseMove();
-        if (lCurtainDrop != null)
-            tCurtainDrop.reverseMove();
+            if (rCurtainDrop != null)
+            {
+                rCurtainDrop.reverseMove();
+                if (lCurtainDrop != null)
+                {
+                    tCurtainDrop.reverseMove();
+                }
+            }
+        }
         yield return new WaitForSeconds(.5f);
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
     }

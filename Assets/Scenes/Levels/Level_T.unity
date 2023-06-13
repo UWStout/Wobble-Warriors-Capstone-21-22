@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2.483427, g: 1.5892949, b: 1.1827779, a: 1}
+  m_IndirectSpecularColor: {r: 2.4827695, g: 1.5919666, b: 1.1900349, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2529,6 +2529,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3998016541731207268, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
+      propertyPath: lCurtainDrop
+      value: 
+      objectReference: {fileID: 1655780050}
+    - target: {fileID: 3998016541731207268, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
+      propertyPath: rCurtainDrop
+      value: 
+      objectReference: {fileID: 1655780049}
+    - target: {fileID: 3998016541731207268, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
+      propertyPath: tCurtainDrop
+      value: 
+      objectReference: {fileID: 1624316115}
     - target: {fileID: 4716820155849093272, guid: 65d572f3749b5f5469729f0753a9e09b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3179,6 +3191,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1499267151111277624, guid: 459a7df33817be94b8209fe735fe8e8c, type: 3}
   m_PrefabInstance: {fileID: 1655780047}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1655780049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1499267151073233714, guid: 459a7df33817be94b8209fe735fe8e8c, type: 3}
+  m_PrefabInstance: {fileID: 1655780047}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d10d0619c7ac2e46a9a0fc8447fc597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1655780050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1499267150376285186, guid: 459a7df33817be94b8209fe735fe8e8c, type: 3}
+  m_PrefabInstance: {fileID: 1655780047}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d10d0619c7ac2e46a9a0fc8447fc597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1751916535
 GameObject:
   m_ObjectHideFlags: 0

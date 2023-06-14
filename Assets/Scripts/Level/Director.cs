@@ -177,7 +177,7 @@ public class Director : MonoBehaviour
             else
             {
                 //Calculating max number of gobs based on 4 player max gobs value
-                MaxGobsInRoom = Mathf.CeilToInt(CurrentRoomInfo.getMaxGobs() * (1 + PlayerList.Count / 4) / 2);
+                MaxGobsInRoom = Mathf.CeilToInt((float)CurrentRoomInfo.getMaxGobs() * (1.0f + (float)PlayerList.Count / 4.0f) / 2.0f);
             }
             //Debug.Log(MaxGobsInRoom+" gobs in room");
             

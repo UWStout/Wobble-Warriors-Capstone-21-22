@@ -418,6 +418,10 @@ public class Director : MonoBehaviour
     public void ResetCurrentExtraLife()
     {
         CurrentExtraLife=ExtraLife;
+        if (LivesCountImage)
+        {
+            LivesCountImage.sprite = livesSprites[CurrentExtraLife];
+        }
     }
     public Vector3 GetPlayerCenter()
     {

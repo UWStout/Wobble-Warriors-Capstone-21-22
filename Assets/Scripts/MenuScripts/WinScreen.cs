@@ -14,11 +14,15 @@ public class WinScreen : MonoBehaviour
     [SerializeField] private RollTheCredits lCurtainDrop;
     [SerializeField] private RollTheCredits rCurtainDrop;
 
+    Director dir;
+
     // Start is called before the first frame update
     void Start()
     {
         //storing the audio source component in the scene
         soundEffectSource = GameObject.FindWithTag("SoundEffectSource").GetComponent<AudioSource>();
+        GameObject d = GameObject.Find("Director");
+        dir = d.GetComponent<Director>();
     }
 
     void Update()
@@ -35,8 +39,7 @@ public class WinScreen : MonoBehaviour
     //Function called when retry button is pressed
     public void Retry()
     {
-        Transform d = transform.Find("Director");
-        Director dir=d.GetComponent<Director>();
+        
         dir.ResetCurrentExtraLife();
         if (canTrigger)
         {

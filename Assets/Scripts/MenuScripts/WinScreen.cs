@@ -35,7 +35,9 @@ public class WinScreen : MonoBehaviour
     //Function called when retry button is pressed
     public void Retry()
     {
-        transform.Find("Director").GetComponent<Director>().ResetCurrentExtraLife();
+        Transform d = transform.Find("Director");
+        Director dir=d.GetComponent<Director>();
+        dir.ResetCurrentExtraLife();
         if (canTrigger)
         {
             //Make button noise

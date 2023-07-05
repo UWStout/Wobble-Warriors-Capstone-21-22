@@ -23,6 +23,7 @@ public class PauseScript : MonoBehaviour
     {
         Director = GameObject.Find("Director").GetComponent<Director>();
         Director.setLivesCountImage(LivesCountImage);
+        Director.SetPauseScript(this);
     }
     private void Update()
     {
@@ -40,6 +41,7 @@ public class PauseScript : MonoBehaviour
 
     public void PauseGame(int playNum)
     {
+        Director.StopRumbling();
         isPaused = !isPaused;
         playerWhoPaused = playNum;
         EventSystem.current.SetSelectedGameObject(null);
@@ -48,7 +50,7 @@ public class PauseScript : MonoBehaviour
 
     public void Resume() //used by pause canvas to resume game
     {
-        
+        Director.StopRumbling();
         isPaused = !isPaused;
     }
 

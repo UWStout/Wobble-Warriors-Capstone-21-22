@@ -51,6 +51,7 @@ public class Director : MonoBehaviour
     //List of player's weapon choices
     public GameObject[] PlayerWeapons;
     Cam cam;
+    PauseScript ps = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -459,5 +460,28 @@ public class Director : MonoBehaviour
     public void shake(float t, float s)
     {
         cam.ShakeCam(t, s);
+    }
+    public void SetPauseScript(PauseScript p)
+    {
+        if (p != null)
+        {
+            ps = p;
+        }
+    }
+    public bool GetPaused()
+    {
+        if (ps != null)
+        {
+            return ps.isPaused;
+        }
+        return false;
+    }
+    public void StopRumbling()
+    {
+        foreach(GameObject boi in PlayerList)
+        {
+            PlayerCharacter p = boi.GetComponent<PlayerCharacter>();
+            p.PleaseRumble(0.0f, 0.0f, 0.0f);
+        }
     }
 }

@@ -146,10 +146,9 @@ public class PlayerCharacter : CharacterMovement
             {
                 groundpound = false;
 
-                if (rumbler)
-                {
-                    rumbler.Rumble(.5f, 1, 1);
-                }
+                
+                PleaseRumble(.5f, 1, 1);
+                
                 if (gpVFX)
                 {
                     Destroy(Instantiate(gpVFX, this.transform.position, Quaternion.identity), 2);
@@ -186,19 +185,17 @@ public class PlayerCharacter : CharacterMovement
     public void EnvHit()
     {
         soundManager.playRandomSound(soundManager.getOofSounds(),.75f,1,.125f);
-        if (rumbler)
-        {
-            rumbler.Rumble(.2f, .25f, .25f);
-        }
+        
+        PleaseRumble(.2f, .25f, .25f);
+        
     }
 
     public void WeaponHit()
     {
         soundManager.playRandomSound(soundManager.getDamageSounds(),1,1,.125f);
-        if (rumbler)
-        {
-            rumbler.Rumble(.5f, 1, 1);
-        }
+        
+        PleaseRumble(.5f, 1, 1);
+        
     }
 
     //Sets the color of the dragon
@@ -253,10 +250,9 @@ public class PlayerCharacter : CharacterMovement
         //Director.shake(.1f, .5f);
         if (!value.performed || !isGrounded() || knockedOut) { return; }
 
-        if (rumbler)
-        {
-            rumbler.Rumble(.125f, 1, 1);
-        }
+        
+        PleaseRumble(.125f, 1, 1);
+        
 
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
@@ -336,10 +332,8 @@ public class PlayerCharacter : CharacterMovement
             return;
         }
 
-        if (rumbler)
-        {
-            rumbler.Rumble(.2f, .25f, .25f);
-        }
+        
+        PleaseRumble(.2f, .25f, .25f);
 
         soundManager.playRandomSound(soundManager.getRawrSounds(),.5f,1,.25f);
 
@@ -376,10 +370,7 @@ public class PlayerCharacter : CharacterMovement
         if (!isDashing && canDash && !groundpound)
         {
             Destroy(Instantiate<GameObject>(dashVFX, this.transform.position, this.transform.rotation), 2.0f);
-            if (rumbler)
-            {
-                rumbler.Rumble(dashLength, .5f, .5f);
-            }
+            PleaseRumble(dashLength, .5f, .5f);
             StartCoroutine(DashCooldown());
             StartCoroutine(Dash());
         }
@@ -412,5 +403,12 @@ public class PlayerCharacter : CharacterMovement
     {
         yield return new WaitForSeconds(2f);
         canTakeBossDmg = true;
+    }
+    public void PleaseRumble(float duration, float lowFrequency, float highFrequency)
+    {
+        if (!Director.GetPaused()&&rumbler!=null)
+        {
+            rumbler.Rumble(duration, lowFrequency, highFrequency);
+        }
     }
 }

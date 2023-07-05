@@ -151,6 +151,10 @@ public class Weapon : MonoBehaviour
                     {
                         characterRoot.GetComponent<CharacterMovement>().health -= (int)(damage * DMGMod);
                     }
+                    else if (!characterRoot.gameObject.GetComponent<TestBossAI>().stunned)
+                    {
+                        characterRoot.GetComponent<CharacterMovement>().health -= (int)(damage * DMGMod / 2);
+                    }
                     else 
                     {
                         if (characterRoot.gameObject.GetComponent<AICharacter>() || !holder.GetComponent<PlayerCharacter>())

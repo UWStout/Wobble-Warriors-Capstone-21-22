@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9208465160545001629}
   - component: {fileID: 2495974707625591011}
+  - component: {fileID: 6226561566756388774}
   m_Layer: 0
   m_Name: Tutorial_Room_04
   m_TagString: Room
@@ -105,6 +106,19 @@ MonoBehaviour:
   SpawnRadius: 5
   isBossRoom: 0
   HazardList: []
+--- !u!65 &6226561566756388774
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710812849591716013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 21.036888, y: 25.65908, z: 21.030884}
+  m_Center: {x: -0.05838394, y: 12.760338, z: 0.93640137}
 --- !u!1 &1761897123080289160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3622,14 +3636,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d40f413b434a8314fae7aa2f581c9b05, type: 3}
---- !u!4 &1315747293438514148 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6497414402629958738, guid: d40f413b434a8314fae7aa2f581c9b05, type: 3}
-  m_PrefabInstance: {fileID: 5217713498550071222}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1804159620418488670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5863866304228992744, guid: d40f413b434a8314fae7aa2f581c9b05, type: 3}
+  m_PrefabInstance: {fileID: 5217713498550071222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1315747293438514148 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6497414402629958738, guid: d40f413b434a8314fae7aa2f581c9b05, type: 3}
   m_PrefabInstance: {fileID: 5217713498550071222}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5285817740038934113

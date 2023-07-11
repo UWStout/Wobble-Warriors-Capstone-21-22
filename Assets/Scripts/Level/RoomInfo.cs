@@ -52,6 +52,7 @@ public class RoomInfo : MonoBehaviour
     void Update()
     {
         //If a enemy or player gets too far away, this should teleport them back to the center of the room
+        /*
         if (Director.GetCurrentRoom() == this.gameObject)
         {
             //Get the transform of the gobstopper, i.e. the point where things get teleported to
@@ -80,6 +81,7 @@ public class RoomInfo : MonoBehaviour
                 }
             }
         }
+        */
 
     }
     public void DoAToggle(float time, bool toggle)
@@ -194,5 +196,17 @@ public class RoomInfo : MonoBehaviour
     public float getSpawnRadius()
     {
         return SpawnRadius;
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (Director.GetCurrentRoomInfo() != this)
+        {
+            return;
+        }
+        Transform boi = other.transform.root;
+        if (boi != null && boi.GetComponent<CharacterMovement>() != null)
+        {
+            boi.SetPositionAndRotation(GobStopper.transform.position, GobStopper.transform.rotation);
+        }
     }
 }

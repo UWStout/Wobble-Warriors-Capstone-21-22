@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7658094337298654377}
   - component: {fileID: 3884852681820554578}
+  - component: {fileID: 7084711665522234394}
   m_Layer: 0
   m_Name: Room07
   m_TagString: Untagged
@@ -103,6 +104,19 @@ MonoBehaviour:
   SpawnRadius: 5
   isBossRoom: 0
   HazardList: []
+--- !u!65 &7084711665522234394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382783969173586744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 37.125885, y: 65.55996, z: 13.4520035}
+  m_Center: {x: -2.4670906, y: 29.73539, z: 0.71027756}
 --- !u!1 &1085937871304595636
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +745,22 @@ Transform:
   m_Father: {fileID: 5335893603904670716}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!54 &3846855540814407406
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859526549996035775}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2920796459705691505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,22 +1414,6 @@ Transform:
   m_Father: {fileID: 608337985005466198}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3846855540814407406
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2859526549996035775}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &4282681644251045313
 GameObject:
   m_ObjectHideFlags: 0
@@ -14063,14 +14077,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2ba696a23e1fcc42ad7907275e2302a, type: 3}
---- !u!4 &48916505938264192 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8490999226062976798, guid: d2ba696a23e1fcc42ad7907275e2302a, type: 3}
-  m_PrefabInstance: {fileID: 8465605676184582046}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &48916505991166296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8490999226082430662, guid: d2ba696a23e1fcc42ad7907275e2302a, type: 3}
+  m_PrefabInstance: {fileID: 8465605676184582046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &48916505938264192 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8490999226062976798, guid: d2ba696a23e1fcc42ad7907275e2302a, type: 3}
   m_PrefabInstance: {fileID: 8465605676184582046}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8495713461394015392

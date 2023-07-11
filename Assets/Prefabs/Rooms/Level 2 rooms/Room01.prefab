@@ -1459,6 +1459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5845532050034096635}
   - component: {fileID: 8558844131244087160}
+  - component: {fileID: 8038892127930910926}
   m_Layer: 0
   m_Name: Room01
   m_TagString: Untagged
@@ -1614,6 +1615,19 @@ MonoBehaviour:
   SpawnRadius: 5
   isBossRoom: 0
   HazardList: []
+--- !u!65 &8038892127930910926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8308842490346145321}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 16.673805, y: 58.71359, z: 16.050838}
+  m_Center: {x: -2.8161526, y: 27.015669, z: 1.2971334}
 --- !u!1 &8601965557482781244
 GameObject:
   m_ObjectHideFlags: 0
@@ -11586,9 +11600,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5cd3e0f1d84d9d542a6e0fdf503fb193, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0a046d9e82e344eb711e7cc1158f5a, type: 3}
---- !u!4 &8956414486535645575 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1f0a046d9e82e344eb711e7cc1158f5a, type: 3}
+--- !u!1 &1298579888759667329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7621306077742609645, guid: 1f0a046d9e82e344eb711e7cc1158f5a, type: 3}
   m_PrefabInstance: {fileID: 8917455985126395500}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1462591862696475109 stripped
@@ -11596,9 +11610,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -1185289528952899703, guid: 1f0a046d9e82e344eb711e7cc1158f5a, type: 3}
   m_PrefabInstance: {fileID: 8917455985126395500}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1298579888759667329 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7621306077742609645, guid: 1f0a046d9e82e344eb711e7cc1158f5a, type: 3}
+--- !u!4 &8956414486535645575 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1f0a046d9e82e344eb711e7cc1158f5a, type: 3}
   m_PrefabInstance: {fileID: 8917455985126395500}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9057463748442307379

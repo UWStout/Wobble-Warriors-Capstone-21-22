@@ -165,6 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4832165057310361250}
   - component: {fileID: 8138938359573931957}
+  - component: {fileID: 637738227425763463}
   m_Layer: 0
   m_Name: tutorial2ndRoom
   m_TagString: Untagged
@@ -304,6 +305,19 @@ MonoBehaviour:
   SpawnRadius: 5
   isBossRoom: 0
   HazardList: []
+--- !u!65 &637738227425763463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050314820860518816}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 34.77031, y: 15.078085, z: 32.658005}
+  m_Center: {x: 87.10807, y: 12.480994, z: 21.200237}
 --- !u!64 &9045533899577103241
 MeshCollider:
   m_ObjectHideFlags: 0

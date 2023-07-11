@@ -52,6 +52,7 @@ public class Director : MonoBehaviour
     public GameObject[] PlayerWeapons;
     Cam cam;
     PauseScript ps = null;
+    Vector3 PlayerCenter;
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +107,7 @@ public class Director : MonoBehaviour
             //Reset timer
             timer = 0;
         }
+        PlayerCenter = GeneratePlayerCenter();
     }
     //Basically calls start
     public void Reload()
@@ -425,6 +427,17 @@ public class Director : MonoBehaviour
         }
     }
     public Vector3 GetPlayerCenter()
+    {
+        if (PlayerCenter != null)
+        {
+            return PlayerCenter;
+        }
+        else
+        {
+            return new Vector3(0, 0, 0);
+        }
+    }
+    public Vector3 GeneratePlayerCenter()
     {
         Vector3 center = new Vector3(0, 0, 0);
         foreach(GameObject player in PlayerList)

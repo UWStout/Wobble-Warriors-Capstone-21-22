@@ -12,9 +12,11 @@ public class Scoot : MonoBehaviour
     [SerializeField] bool up = false;
     float dt = 0;
     bool InTheWay = false;
+    Director dir;
     // Start is called before the first frame update
     void Start()
     {
+        dir = GameObject.Find("Director").GetComponent<Director>();
         OrPos = transform.position;
         TargetPos = OrPos;
         if (up)
@@ -27,7 +29,13 @@ public class Scoot : MonoBehaviour
         }
         
     }
-
+    private void Update()
+    {
+        if (dir.GetPlayerCenter().z > this.transform.z)
+        {
+            SetInTheWay();
+        }
+    }
     // Update is called once per frame
     void LateUpdate()
     {

@@ -31,7 +31,7 @@ public class Scoot : MonoBehaviour
     }
     private void Update()
     {
-        if (dir.GetPlayerCenter().z > this.transform.z)
+        if (dir.GetPlayerCenter().z > this.transform.position.z)
         {
             SetInTheWay();
         }

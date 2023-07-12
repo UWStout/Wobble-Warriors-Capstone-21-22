@@ -29,8 +29,7 @@ public class CharacterMovement : MonoBehaviour
     public List<Transform> targets;
     [SerializeField] float range = 5;
     [SerializeField] float FOV = 360;
-    [SerializeField] float attackCooldown = 0f;
-    bool iCanAttack = true;
+
     private AudioSource source;
     [SerializeField] AudioClip swingSound;
 
@@ -169,23 +168,15 @@ public class CharacterMovement : MonoBehaviour
 
     public void Attack(Transform target)
     {
-        if (iCanAttack)
+        if (!knockedOut)
         {
-            if (!knockedOut)
+            if(source && swingSound)
             {
-                if (source && swingSound)
-                {
-                    source.pitch = Random.Range(.75f, 1.25f);
-                    source.PlayOneShot(swingSound);
-                    source.pitch = 1;
-                }
-                SwingScript.Attack(target);
-                StartCoroutine(ManageAttackCooldown());
+                source.pitch = Random.Range(.75f, 1.25f);
+                source.PlayOneShot(swingSound);
+                source.pitch = 1;
             }
-        }
-        else
-        {
-            iCanAttack = true;
+            SwingScript.Attack(target);
         }
     }
 
@@ -229,17 +220,7 @@ public class CharacterMovement : MonoBehaviour
         }
         
     }
-    public IEnumerator ManageAttackCooldown()
-    {
-        iCanAttack = false;
-        float cooldown = attackCooldown;
-        while(cooldown>0)
-        {
-            cooldown -= Time.fixedDeltaTime;
-        }
-        iCanAttack = true;
-        yield return 0;
-    }
+
     private void updateRootJoint(Quaternion targetRotation)
     {
         // Calculate the joint's local rotation based on the axis and secondary axis

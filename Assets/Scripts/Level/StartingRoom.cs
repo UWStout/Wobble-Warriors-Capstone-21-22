@@ -16,5 +16,10 @@ public class StartingRoom : MonoBehaviour
         dir.ResetCurrentExtraLife();
         dir.ResetPlayerWeapons();
         dir.ActivateRoom();
+        GameObject gobstopper = this.GetComponent<RoomInfo>().GetGobStopper();
+        foreach(GameObject boi in dir.PlayerList)
+        {
+            boi.transform.position = gobstopper.transform.position + new Vector3(dir.PlayerList.IndexOf(boi)*2, 0, 0);
+        }
     }
 }

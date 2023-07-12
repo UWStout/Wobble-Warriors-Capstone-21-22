@@ -389,16 +389,20 @@ MonoBehaviour:
   targets: []
   range: 5
   FOV: 360
+  swingSound: {fileID: 0}
   animator: {fileID: 0}
-  targetString: Target
-  chosenTarget: {fileID: 0}
+  currentTarget: {fileID: 0}
   attackRate: 0.5
+  maxDistance: 10
   attackDistance: 2
+  ableToAttk: 1
   growlSounds:
   - {fileID: 8300000, guid: 1d3e3ec7d44f25443bee555e25db6134, type: 3}
   - {fileID: 8300000, guid: 2ebaa82a96a865046af0b091137ccb08, type: 3}
   - {fileID: 8300000, guid: 9451a3247ec7e7c4f858d39328942576, type: 3}
   soundChance: 40
+  LowPitch: 0.75
+  HighPitch: 1.25
   healthbar: {fileID: 1011566801017145625}
 --- !u!82 &7668939795574851439
 AudioSource:
@@ -759,6 +763,8 @@ MonoBehaviour:
   holder: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 1516f7599ef640645a3bd4a67aa8bbf8, type: 3}
   hitVFX: {fileID: 4226006061756919649, guid: fcce99fd74f1d0c468dcee0216d70279, type: 3}
+  LowPitch: 0.75
+  HighPitch: 1.25
 --- !u!82 &2453285520391710555
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5763,6 +5769,10 @@ PrefabInstance:
     - target: {fileID: 3419928928113521817, guid: 51836778c3f74d546a56f16f2df5c0f1, type: 3}
       propertyPath: m_Name
       value: HealthUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077906096591376726, guid: 51836778c3f74d546a56f16f2df5c0f1, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8587970725612356560, guid: 51836778c3f74d546a56f16f2df5c0f1, type: 3}
       propertyPath: m_AnchorMax.x

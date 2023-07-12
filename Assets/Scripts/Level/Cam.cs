@@ -110,8 +110,8 @@ public class Cam : MonoBehaviour
         //Check the distance of every player from the camera
         desiredFOV = Camera.fieldOfView;
         float accel = -Mathf.Infinity;
-        Debug.Log(director.PlayerList.Count+" Players");
-        Debug.Log(director.GetGobs().Count + " Gobs");
+        //Debug.Log(director.PlayerList.Count+" Players");
+        //Debug.Log(director.GetGobs().Count + " Gobs");
         foreach (GameObject p in director.PlayerList)
         {
             GameObject q = p.GetComponentInChildren<CharacterMovement>().gameObject;

@@ -44,9 +44,6 @@ public class RoomInfo : MonoBehaviour
         Director = GameObject.Find("Director").GetComponent<Director>();
         //Get the list of players from the director
         PlayerList = Director.PlayerList;
-        
-
-
     }
     // Update is called once per frame
     void Update()
@@ -201,12 +198,17 @@ public class RoomInfo : MonoBehaviour
     {
         if (Director.GetCurrentRoomInfo() != this)
         {
+            Debug.Log("Wrong room lmao");
             return;
         }
-        Transform boi = other.transform.root;
-        if (boi != null && boi.GetComponent<CharacterMovement>() != null)
+        CharacterMovement boi = other.transform.GetComponentInParent<CharacterMovement>();
+        if (boi != null)
         {
-            boi.SetPositionAndRotation(GobStopper.transform.position, GobStopper.transform.rotation);
+            boi.transform.SetPositionAndRotation(GobStopper.transform.position, GobStopper.transform.rotation);
+        }
+        else
+        {
+            Debug.Log(boi.name+","+other.name);
         }
     }
 }

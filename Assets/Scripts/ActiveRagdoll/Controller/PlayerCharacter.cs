@@ -53,9 +53,9 @@ public class PlayerCharacter : CharacterMovement
     [SerializeField] GameObject ChargeVFX;
 
     [SerializeField] DragonSounds soundManager;
-
     public void OnEnable()
     {
+        
         rumbler = GetComponent<ControllerRumble>();
         playerNumber = GetComponent<PlayerInput>().playerIndex;
         string playerLink = "player" + (playerNumber + 1);

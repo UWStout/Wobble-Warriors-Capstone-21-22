@@ -69,7 +69,11 @@ public class MainMenuScript : MonoBehaviour
         lCurtainDrop.reverseMove();
         rCurtainDrop.reverseMove();
         yield return new WaitForSeconds(1f);
-        GameObject.Find("Director").GetComponent<Director>().StopRumbling();
+        GameObject d= GameObject.Find("Director");
+        if (d != null)
+        {
+            d.GetComponent<Director>().StopRumbling();
+        }
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
     }
 }

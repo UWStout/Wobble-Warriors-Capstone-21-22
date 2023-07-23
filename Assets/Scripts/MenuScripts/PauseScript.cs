@@ -56,6 +56,7 @@ public class PauseScript : MonoBehaviour
 
     public void MainMenu()
     {
+        Director.StopRumbling();
         Time.timeScale = 1;
         isPaused = false;
         for (int c = 0; c < 4; c++)

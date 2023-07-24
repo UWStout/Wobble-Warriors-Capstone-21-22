@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1481.7754, g: 1835.8867, b: 2430.4492, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -430.2, y: -180.4}
-  m_SizeDelta: {x: 378, y: 207}
+  m_AnchoredPosition: {x: 477.5, y: -22.2}
+  m_SizeDelta: {x: 378, y: 545}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2403040
 MonoBehaviour:
@@ -1119,7 +1119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &163541329
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1343,8 +1343,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -430.2, y: 76.8}
-  m_SizeDelta: {x: 378, y: 700}
+  m_AnchoredPosition: {x: -418.2, y: -29.3}
+  m_SizeDelta: {x: 378, y: 205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &185385441
 MonoBehaviour:
@@ -7560,7 +7560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1111472671
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14599,6 +14599,10 @@ PrefabInstance:
     - target: {fileID: 1499267151111277623, guid: 459a7df33817be94b8209fe735fe8e8c, type: 3}
       propertyPath: m_Name
       value: MovingCurtains
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499267151111277623, guid: 459a7df33817be94b8209fe735fe8e8c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1499267151111277624, guid: 459a7df33817be94b8209fe735fe8e8c, type: 3}
       propertyPath: m_Pivot.x

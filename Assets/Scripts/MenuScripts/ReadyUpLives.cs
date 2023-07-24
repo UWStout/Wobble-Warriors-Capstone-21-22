@@ -14,14 +14,14 @@ public class ReadyUpLives : MonoBehaviour
     private Image numberOfLivesImage;
     [SerializeField]
     public Sprite[] lives = new Sprite[10]; //stores life images, element 1 = 1 total lives
-    public int totalLives = 1; //default life image that is showing and total lives given to player
+    public int totalLives = 3; //default life image that is showing and total lives given to player
 
 
     // Start is called before the first frame update
     void Start()
     {
-        numberOfLivesImage.sprite = lives[1];
-        totalLives = 1;
+        numberOfLivesImage.sprite = lives[3];
+        totalLives = 3;
         director = GameObject.Find("Director").GetComponent<Director>();
         director.SetExtraLives(totalLives);
     }

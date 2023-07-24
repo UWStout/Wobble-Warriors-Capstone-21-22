@@ -30,7 +30,7 @@ public class Director : MonoBehaviour
     //Basically the last door that the player used
     ModularDoor DoOverDoor = null;
     //Current number of extra lives
-    [SerializeField] public int ExtraLife = 1;
+    [SerializeField] public int ExtraLife = 3;
     int CurrentExtraLife=1;
     //If true, players have an extra life system
     [SerializeField] bool DoExtraLives = false;

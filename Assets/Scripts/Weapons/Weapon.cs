@@ -86,9 +86,14 @@ public class Weapon : MonoBehaviour
 
                 if (hitCollider.gameObject.CompareTag("Boss"))
                 {
-                    if (hitCollider.gameObject.GetComponent<TestBossAI>().stunned)
+                    GameObject boss = hitCollider.gameObject;
+                    if (boss.GetComponent<TestBossAI>().stunned && boss.transform.childCount > 4) // check if ducks are active
                     {
-                        hitCollider.gameObject.GetComponent<CharacterMovement>().health -= (int)(damage * DMGMod);
+                        boss.GetComponent<CharacterMovement>().health -= (int)(damage * DMGMod);
+                    }
+                    else
+                    {
+                        boss.GetComponent<CharacterMovement>().health -= (int)(damage * DMGMod / 2);
                     }
                 }
                 else
@@ -147,9 +152,17 @@ public class Weapon : MonoBehaviour
                     Vector3 hitVector = characterRoot.position - transform.position;
                     hitVector = new Vector3(hitVector.x, 0, hitVector.z);
                     //damage character, and set some regen variables 
-                    if (characterRoot.gameObject.CompareTag("Boss") && characterRoot.gameObject.GetComponent<TestBossAI>().stunned)
+                    if (characterRoot.gameObject.CompareTag("Boss"))
                     {
-                        characterRoot.GetComponent<CharacterMovement>().health -= (int)(damage * DMGMod);
+                        GameObject boss = characterRoot.gameObject;
+                        if (boss.GetComponent<TestBossAI>().stunned && boss.transform.childCount > 4)
+                        {
+                            boss.GetComponent<CharacterMovement>().health -= (int)(damage * DMGMod);
+                        }
+                        else
+                        {
+                            boss.GetComponent<CharacterMovement>().health -= (int)(damage * DMGMod / 2);
+                        }
                     }
                     else 
                     {

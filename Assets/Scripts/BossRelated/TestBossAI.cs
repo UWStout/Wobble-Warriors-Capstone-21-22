@@ -97,6 +97,7 @@ public class TestBossAI : CharacterMovement
             if (charging)
             {
                 StartCoroutine(Stun(10.0f));
+                pillarBounce();
             }
         }
     }
@@ -145,6 +146,17 @@ public class TestBossAI : CharacterMovement
         yield return new WaitForSeconds(stunTime);
         stunned = false;
         StartCoroutine(ChargeCooldown(2f));
+    }
+
+    private void pillarBounce()
+    {
+        //get cheese
+        GameObject[] cheese = GameObject.FindGameObjectsWithTag("Pillar");
+        //apply explosion bottom up
+        foreach (GameObject chee in cheese)
+        {
+            chee.GetComponent<Rigidbody>().AddExplosionForce((5f * 500000F), this.gameObject.transform.position, 10f, 50f, ForceMode.Force);
+        }
     }
 
     IEnumerator ChargeCooldown(float cooldownTime)

@@ -161,6 +161,20 @@ public class Director : MonoBehaviour
         }
         //reset spawned enemy count
         NumGobsSpawned = CurrentGobStopper.transform.childCount;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject enemy in enemies)
+        {
+            AICharacter meleeChar = enemy.GetComponent<AICharacter>();
+            if (meleeChar != null)
+            {
+                if(meleeChar.health <= 0)
+                {
+                    enemy.transform.parent.gameObject.SetActive(false);
+                }
+            }
+        }
+        //check if dead goblins exist in room, if so disable them
+
         //Set enemy spawning limit equal proportional to player count based on max number of goblins in roominfo, unless the player has cleared the room before, in which case set limit to 0
         if (CurrentRoomInfo.getRoomCleared() == false)
         {

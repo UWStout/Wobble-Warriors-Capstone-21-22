@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveDuration: 1
-  Distance: 7
+  Distance: 8.5
   up: 0
 --- !u!1 &4048849567203109608
 GameObject:
@@ -640,7 +640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4048849566604711830}
-  - {fileID: 4048849567246980077}
+  - {fileID: 4645279297877151598}
   - {fileID: 4048849566099378909}
   - {fileID: 4048849566749558373}
   - {fileID: 4413338355712319262}
@@ -705,9 +705,8 @@ GameObject:
   - component: {fileID: 4048849567246979984}
   - component: {fileID: 4048849567246979987}
   - component: {fileID: 4048849567246979986}
-  - component: {fileID: 8544235423710740292}
   m_Layer: 0
-  m_Name: Rwall
+  m_Name: Meshes
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,13 +719,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4048849567246980076}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.26, y: 3.62, z: 0.63}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 0.8, y: 10.65, z: 20}
   m_Children:
   - {fileID: 4716891536381867078}
-  m_Father: {fileID: 4048849567203109609}
-  m_RootOrder: 1
+  m_Father: {fileID: 4645279297877151598}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4048849567246979984
 MeshFilter:
@@ -790,21 +789,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 5.464282, z: 1.0123676}
   m_Center: {x: 0, y: 2.2321403, z: -0.006183767}
---- !u!114 &8544235423710740292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4048849567246980076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveDuration: 1
-  Distance: 7
-  up: 0
 --- !u!1 &4369711843762034550
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +842,53 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.459446, z: 1}
   m_Center: {x: 0, y: 16.753592, z: 0}
+--- !u!1 &6592170017282014367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4645279297877151598}
+  - component: {fileID: 9173896069896365382}
+  m_Layer: 0
+  m_Name: RWall
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4645279297877151598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592170017282014367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.26, y: 3.62, z: 10.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4048849567246980077}
+  m_Father: {fileID: 4048849567203109609}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9173896069896365382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592170017282014367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d278bee3e831ae4fb950d2122951ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveDuration: 1
+  Distance: 8.5
+  up: 0
 --- !u!1 &7121696983204752358
 GameObject:
   m_ObjectHideFlags: 0

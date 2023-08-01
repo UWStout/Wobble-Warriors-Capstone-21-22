@@ -165,7 +165,16 @@ public class Director : MonoBehaviour
         foreach(GameObject enemy in enemies)
         {
             AICharacter meleeChar = enemy.GetComponent<AICharacter>();
-            if (meleeChar != null)
+            AICharacter rangeChar = enemy.GetComponent<RangedAI>();
+
+            if (rangeChar != null)
+            {
+                if (rangeChar.health <= 0)
+                {
+                    enemy.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
+                }
+            }
+            else if (meleeChar != null)
             {
                 if(meleeChar.health <= 0)
                 {
